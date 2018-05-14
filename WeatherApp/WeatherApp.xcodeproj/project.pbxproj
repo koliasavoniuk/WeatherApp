@@ -20,6 +20,7 @@
 		76B732E120A99123004A7D73 /* HourlyForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732DF20A99123004A7D73 /* HourlyForecastViewController.swift */; };
 		76B732E220A99123004A7D73 /* HourlyForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732E020A99123004A7D73 /* HourlyForecastViewController.xib */; };
 		76B732E420A99139004A7D73 /* HourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732E320A99139004A7D73 /* HourlyForecastView.swift */; };
+		76B732E920A9991B004A7D73 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732E820A9991B004A7D73 /* CommonConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		76B732DF20A99123004A7D73 /* HourlyForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastViewController.swift; sourceTree = "<group>"; };
 		76B732E020A99123004A7D73 /* HourlyForecastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyForecastViewController.xib; sourceTree = "<group>"; };
 		76B732E320A99139004A7D73 /* HourlyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastView.swift; sourceTree = "<group>"; };
+		76B732E820A9991B004A7D73 /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		76B732CD20A98D78004A7D73 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				76B732E720A998F9004A7D73 /* Constants */,
 				76B732CE20A98D89004A7D73 /* UI */,
 			);
 			path = Source;
@@ -126,6 +129,14 @@
 				76B732DC20A9910D004A7D73 /* DailyForecastViewController.xib */,
 			);
 			path = DailyForecastViewController;
+			sourceTree = "<group>";
+		};
+		76B732E720A998F9004A7D73 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				76B732E820A9991B004A7D73 /* CommonConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 				76B732D220A98DD2004A7D73 /* MainTabBarViewController.swift in Sources */,
 				76B732DA20A990F9004A7D73 /* DailyForecastView.swift in Sources */,
 				76B732C120A98D16004A7D73 /* WeatherApp.xcdatamodeld in Sources */,
+				76B732E920A9991B004A7D73 /* CommonConstants.swift in Sources */,
 				76B732E120A99123004A7D73 /* HourlyForecastViewController.swift in Sources */,
 				76B732B920A98D16004A7D73 /* AppDelegate.swift in Sources */,
 				76B732D520A98DE5004A7D73 /* MainTabBarView.swift in Sources */,

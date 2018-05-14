@@ -15,12 +15,20 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.configureTabBar()
     }
 
     // MARK: - Private
     
     private func configureTabBar() {
-        //let hourlyForecastVC = createNavController(viewController: HourlyForecastViewController(), with: <#T##UIImage#>)
+        let hourlyIcon = UIImage(named: PictureName.hourly_icon.rawValue) ?? UIImage()
+        let dailyIcon = UIImage(named: PictureName.daily_icon.rawValue) ?? UIImage()
+        //let settingsIcon = UIImage(named: PictureName.settings_icon.rawValue) ?? UIImage()
+        
+        let hourlyForecastVC = createNavController(viewController: HourlyForecastViewController(), with: hourlyIcon)
+        let dailyForecastVC = createNavController(viewController: DailyForecastViewController(), with: dailyIcon)
+        
+        viewControllers = [hourlyForecastVC, dailyForecastVC]
     }
 }
 
