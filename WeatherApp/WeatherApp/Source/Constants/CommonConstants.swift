@@ -13,4 +13,5 @@ enum PictureName: String {
     case hourly_icon
     case daily_icon
     case settings_icon
+    case current_icon
 }

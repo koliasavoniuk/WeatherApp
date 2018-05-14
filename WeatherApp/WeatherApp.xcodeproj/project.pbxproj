@@ -21,6 +21,9 @@
 		76B732E220A99123004A7D73 /* HourlyForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732E020A99123004A7D73 /* HourlyForecastViewController.xib */; };
 		76B732E420A99139004A7D73 /* HourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732E320A99139004A7D73 /* HourlyForecastView.swift */; };
 		76B732E920A9991B004A7D73 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732E820A9991B004A7D73 /* CommonConstants.swift */; };
+		76B732EC20A9AD56004A7D73 /* CurrentForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732EB20A9AD56004A7D73 /* CurrentForecastView.swift */; };
+		76B732EF20A9AD67004A7D73 /* CurrentForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732ED20A9AD67004A7D73 /* CurrentForecastViewController.swift */; };
+		76B732F020A9AD67004A7D73 /* CurrentForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732EE20A9AD67004A7D73 /* CurrentForecastViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		76B732E020A99123004A7D73 /* HourlyForecastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyForecastViewController.xib; sourceTree = "<group>"; };
 		76B732E320A99139004A7D73 /* HourlyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastView.swift; sourceTree = "<group>"; };
 		76B732E820A9991B004A7D73 /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
+		76B732EB20A9AD56004A7D73 /* CurrentForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecastView.swift; sourceTree = "<group>"; };
+		76B732ED20A9AD67004A7D73 /* CurrentForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecastViewController.swift; sourceTree = "<group>"; };
+		76B732EE20A9AD67004A7D73 /* CurrentForecastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentForecastViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		76B732CE20A98D89004A7D73 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				76B732EA20A9AD33004A7D73 /* CurrentForecastViewController */,
 				76B732D820A990DF004A7D73 /* DailyForecastViewController */,
 				76B732D620A990B9004A7D73 /* HourlyForecastViewController */,
 				76B732CF20A98D96004A7D73 /* MainTabBarController */,
@@ -124,9 +131,9 @@
 		76B732D820A990DF004A7D73 /* DailyForecastViewController */ = {
 			isa = PBXGroup;
 			children = (
-				76B732D920A990F9004A7D73 /* DailyForecastView.swift */,
 				76B732DB20A9910D004A7D73 /* DailyForecastViewController.swift */,
 				76B732DC20A9910D004A7D73 /* DailyForecastViewController.xib */,
+				76B732D920A990F9004A7D73 /* DailyForecastView.swift */,
 			);
 			path = DailyForecastViewController;
 			sourceTree = "<group>";
@@ -137,6 +144,16 @@
 				76B732E820A9991B004A7D73 /* CommonConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		76B732EA20A9AD33004A7D73 /* CurrentForecastViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76B732ED20A9AD67004A7D73 /* CurrentForecastViewController.swift */,
+				76B732EE20A9AD67004A7D73 /* CurrentForecastViewController.xib */,
+				76B732EB20A9AD56004A7D73 /* CurrentForecastView.swift */,
+			);
+			path = CurrentForecastViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B732E220A99123004A7D73 /* HourlyForecastViewController.xib in Resources */,
+				76B732F020A9AD67004A7D73 /* CurrentForecastViewController.xib in Resources */,
 				76B732D320A98DD2004A7D73 /* MainTabBarViewController.xib in Resources */,
 				76B732DE20A9910D004A7D73 /* DailyForecastViewController.xib in Resources */,
 				76B732C620A98D16004A7D73 /* LaunchScreen.storyboard in Resources */,
@@ -214,7 +232,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B732E420A99139004A7D73 /* HourlyForecastView.swift in Sources */,
+				76B732EC20A9AD56004A7D73 /* CurrentForecastView.swift in Sources */,
 				76B732D220A98DD2004A7D73 /* MainTabBarViewController.swift in Sources */,
+				76B732EF20A9AD67004A7D73 /* CurrentForecastViewController.swift in Sources */,
 				76B732DA20A990F9004A7D73 /* DailyForecastView.swift in Sources */,
 				76B732C120A98D16004A7D73 /* WeatherApp.xcdatamodeld in Sources */,
 				76B732E920A9991B004A7D73 /* CommonConstants.swift in Sources */,
