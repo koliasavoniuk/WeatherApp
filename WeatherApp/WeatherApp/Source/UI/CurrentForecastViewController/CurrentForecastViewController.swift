@@ -12,6 +12,9 @@ class CurrentForecastViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.view.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.title = "Current"
     }
 }
