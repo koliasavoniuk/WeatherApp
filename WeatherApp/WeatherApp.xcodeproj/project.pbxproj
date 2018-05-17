@@ -20,6 +20,13 @@
 		76B732E120A99123004A7D73 /* HourlyForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732DF20A99123004A7D73 /* HourlyForecastViewController.swift */; };
 		76B732E220A99123004A7D73 /* HourlyForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732E020A99123004A7D73 /* HourlyForecastViewController.xib */; };
 		76B732E420A99139004A7D73 /* HourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732E320A99139004A7D73 /* HourlyForecastView.swift */; };
+		76B732E920A9991B004A7D73 /* CommonConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732E820A9991B004A7D73 /* CommonConstants.swift */; };
+		76B732EC20A9AD56004A7D73 /* CurrentForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732EB20A9AD56004A7D73 /* CurrentForecastView.swift */; };
+		76B732EF20A9AD67004A7D73 /* CurrentForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732ED20A9AD67004A7D73 /* CurrentForecastViewController.swift */; };
+		76B732F020A9AD67004A7D73 /* CurrentForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732EE20A9AD67004A7D73 /* CurrentForecastViewController.xib */; };
+		76B732F520AAB238004A7D73 /* FavoritePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732F320AAB238004A7D73 /* FavoritePlacesViewController.swift */; };
+		76B732F620AAB238004A7D73 /* FavoritePlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732F420AAB238004A7D73 /* FavoritePlacesViewController.xib */; };
+		76B732F820AAB252004A7D73 /* FavoritePlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732F720AAB252004A7D73 /* FavoritePlacesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +45,13 @@
 		76B732DF20A99123004A7D73 /* HourlyForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastViewController.swift; sourceTree = "<group>"; };
 		76B732E020A99123004A7D73 /* HourlyForecastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyForecastViewController.xib; sourceTree = "<group>"; };
 		76B732E320A99139004A7D73 /* HourlyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastView.swift; sourceTree = "<group>"; };
+		76B732E820A9991B004A7D73 /* CommonConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonConstants.swift; sourceTree = "<group>"; };
+		76B732EB20A9AD56004A7D73 /* CurrentForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecastView.swift; sourceTree = "<group>"; };
+		76B732ED20A9AD67004A7D73 /* CurrentForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecastViewController.swift; sourceTree = "<group>"; };
+		76B732EE20A9AD67004A7D73 /* CurrentForecastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentForecastViewController.xib; sourceTree = "<group>"; };
+		76B732F320AAB238004A7D73 /* FavoritePlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlacesViewController.swift; sourceTree = "<group>"; };
+		76B732F420AAB238004A7D73 /* FavoritePlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritePlacesViewController.xib; sourceTree = "<group>"; };
+		76B732F720AAB252004A7D73 /* FavoritePlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlacesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +97,8 @@
 		76B732CD20A98D78004A7D73 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				76B732F120A9AFA6004A7D73 /* Extensions */,
+				76B732E720A998F9004A7D73 /* Constants */,
 				76B732CE20A98D89004A7D73 /* UI */,
 			);
 			path = Source;
@@ -91,6 +107,8 @@
 		76B732CE20A98D89004A7D73 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				76B732F220AAB15A004A7D73 /* FavoritePlacesViewController */,
+				76B732EA20A9AD33004A7D73 /* CurrentForecastViewController */,
 				76B732D820A990DF004A7D73 /* DailyForecastViewController */,
 				76B732D620A990B9004A7D73 /* HourlyForecastViewController */,
 				76B732CF20A98D96004A7D73 /* MainTabBarController */,
@@ -121,11 +139,46 @@
 		76B732D820A990DF004A7D73 /* DailyForecastViewController */ = {
 			isa = PBXGroup;
 			children = (
-				76B732D920A990F9004A7D73 /* DailyForecastView.swift */,
 				76B732DB20A9910D004A7D73 /* DailyForecastViewController.swift */,
 				76B732DC20A9910D004A7D73 /* DailyForecastViewController.xib */,
+				76B732D920A990F9004A7D73 /* DailyForecastView.swift */,
 			);
 			path = DailyForecastViewController;
+			sourceTree = "<group>";
+		};
+		76B732E720A998F9004A7D73 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				76B732E820A9991B004A7D73 /* CommonConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		76B732EA20A9AD33004A7D73 /* CurrentForecastViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76B732ED20A9AD67004A7D73 /* CurrentForecastViewController.swift */,
+				76B732EE20A9AD67004A7D73 /* CurrentForecastViewController.xib */,
+				76B732EB20A9AD56004A7D73 /* CurrentForecastView.swift */,
+			);
+			path = CurrentForecastViewController;
+			sourceTree = "<group>";
+		};
+		76B732F120A9AFA6004A7D73 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		76B732F220AAB15A004A7D73 /* FavoritePlacesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				76B732F320AAB238004A7D73 /* FavoritePlacesViewController.swift */,
+				76B732F420AAB238004A7D73 /* FavoritePlacesViewController.xib */,
+				76B732F720AAB252004A7D73 /* FavoritePlacesView.swift */,
+			);
+			path = FavoritePlacesViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,10 +241,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B732E220A99123004A7D73 /* HourlyForecastViewController.xib in Resources */,
+				76B732F020A9AD67004A7D73 /* CurrentForecastViewController.xib in Resources */,
 				76B732D320A98DD2004A7D73 /* MainTabBarViewController.xib in Resources */,
 				76B732DE20A9910D004A7D73 /* DailyForecastViewController.xib in Resources */,
 				76B732C620A98D16004A7D73 /* LaunchScreen.storyboard in Resources */,
 				76B732C320A98D16004A7D73 /* Assets.xcassets in Resources */,
+				76B732F620AAB238004A7D73 /* FavoritePlacesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,10 +257,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B732F520AAB238004A7D73 /* FavoritePlacesViewController.swift in Sources */,
 				76B732E420A99139004A7D73 /* HourlyForecastView.swift in Sources */,
+				76B732EC20A9AD56004A7D73 /* CurrentForecastView.swift in Sources */,
 				76B732D220A98DD2004A7D73 /* MainTabBarViewController.swift in Sources */,
+				76B732EF20A9AD67004A7D73 /* CurrentForecastViewController.swift in Sources */,
 				76B732DA20A990F9004A7D73 /* DailyForecastView.swift in Sources */,
+				76B732F820AAB252004A7D73 /* FavoritePlacesView.swift in Sources */,
 				76B732C120A98D16004A7D73 /* WeatherApp.xcdatamodeld in Sources */,
+				76B732E920A9991B004A7D73 /* CommonConstants.swift in Sources */,
 				76B732E120A99123004A7D73 /* HourlyForecastViewController.swift in Sources */,
 				76B732B920A98D16004A7D73 /* AppDelegate.swift in Sources */,
 				76B732D520A98DE5004A7D73 /* MainTabBarView.swift in Sources */,

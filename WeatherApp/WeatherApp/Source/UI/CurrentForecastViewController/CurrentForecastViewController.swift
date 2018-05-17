@@ -1,5 +1,5 @@
 //
-//  HourlyForecastViewController.swift
+//  CurrentForecastViewController.swift
 //  WeatherApp
 //
 //  Created by Mykola Savoniuk on 5/14/18.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class HourlyForecastViewController: UIViewController {
+class CurrentForecastViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.backgroundColor = UIColor.white
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.title = "Hourly"
+        self.navigationItem.title = "Current"
     }
 }
