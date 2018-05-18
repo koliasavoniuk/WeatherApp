@@ -8,13 +8,31 @@
 
 import UIKit
 
-class HourlyForecastViewController: UIViewController {
-
+class HourlyForecastViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet var rootView: HourlyForecastView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor.white
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.title = "Hourly"
+        
+        self.rootView.tableView.register(cells: HourlyForecastTableViewCell.self)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withCellClass: HourlyForecastTableViewCell.self, for: indexPath)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
 }
