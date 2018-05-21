@@ -13,8 +13,14 @@ class CurrentForecastViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.configureView()
+    }
+    
+    // MARK: - Private
+    
+    private func configureView() {
         self.view.backgroundColor = UIColor.white
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.title = "Current"
+        self.navigationItem.title = VCTitles.current.rawValue
     }
 }

@@ -17,7 +17,7 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="CurrentForecastView" customModule="WeatherApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -81,6 +81,14 @@
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="JKW-X8-7ct"/>
+            <connections>
+                <outlet property="humidityLabel" destination="wRB-jh-XGU" id="Rcq-fa-fgk"/>
+                <outlet property="millimetersOfMercuryLabel" destination="GnQ-IH-1R6" id="XD5-oD-SLG"/>
+                <outlet property="temperatureLabel" destination="TEy-cN-f8l" id="jPa-bk-S0B"/>
+                <outlet property="weatherDescription" destination="AWr-RB-Phb" id="eso-ki-OST"/>
+                <outlet property="weatherImage" destination="VWm-oH-gBc" id="JhF-v2-Ae6"/>
+                <outlet property="windspeedLabel" destination="Edz-yc-kVR" id="n1H-zt-W13"/>
+            </connections>
         </view>
     </objects>
 </document>

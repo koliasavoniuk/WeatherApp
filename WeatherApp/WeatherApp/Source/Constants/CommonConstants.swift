@@ -16,3 +16,11 @@ enum PictureName: String {
     case current_icon
     case favorite_icon
 }
+
+// MARK: - ViewController Titles
+enum VCTitles: String {
+    case current = "Current"
+    case daily = "Daily"
+    case hourly = "Hourly"
+    case favorite = "Favorite"
+}

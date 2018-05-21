@@ -9,13 +9,12 @@
 import UIKit
 
 class CurrentForecastView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+    
+    // MARK: - Outlets
+    @IBOutlet var temperatureLabel: UILabel!
+    @IBOutlet var windspeedLabel: UILabel!
+    @IBOutlet var millimetersOfMercuryLabel: UILabel!
+    @IBOutlet var humidityLabel: UILabel!
+    @IBOutlet var weatherImage: UIImageView!
+    @IBOutlet var weatherDescription: UILabel!
 }
