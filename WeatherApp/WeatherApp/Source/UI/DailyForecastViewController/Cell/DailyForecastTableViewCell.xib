@@ -96,6 +96,16 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="fDb-Kd-egw" id="Dht-26-Kar"/>
+                <outlet property="humidityLabel" destination="a9W-zb-sAs" id="W1i-xC-dmb"/>
+                <outlet property="millimeterOfMercureLabel" destination="unF-YQ-sKZ" id="04R-xu-tIU"/>
+                <outlet property="temperatureLabel" destination="XFv-46-Jrk" id="WXB-i0-aGF"/>
+                <outlet property="timeLabel" destination="vHJ-Wl-nHg" id="icE-jp-Oyr"/>
+                <outlet property="weatherImage" destination="piQ-Eo-llU" id="kKQ-yH-CdQ"/>
+                <outlet property="weekdayLabel" destination="Plq-A7-Zc0" id="UZ9-9G-ald"/>
+                <outlet property="windSpeedLabel" destination="vQ6-9T-UwZ" id="FVF-tf-Lxl"/>
+            </connections>
             <point key="canvasLocation" x="25.5" y="52"/>
         </tableViewCell>
     </objects>

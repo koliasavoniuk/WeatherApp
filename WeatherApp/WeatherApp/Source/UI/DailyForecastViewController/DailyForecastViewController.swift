@@ -28,9 +28,12 @@ class DailyForecastViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withCellClass: DailyForecastTableViewCell.self, for: indexPath)
+        let cell: DailyForecastTableViewCell?
+        cell = cast(tableView.dequeueReusableCell(withCellClass: DailyForecastTableViewCell.self, for: indexPath))
         
-        return cell
+        cell?.dateLabel.text = "dateLabel"
+        
+        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
