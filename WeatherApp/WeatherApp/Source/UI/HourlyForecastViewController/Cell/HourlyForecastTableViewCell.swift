@@ -9,6 +9,8 @@
 import UIKit
 
 class HourlyForecastTableViewCell: UITableViewCell {
+    
+    // MARK: - Outlets
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var weekdayLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!

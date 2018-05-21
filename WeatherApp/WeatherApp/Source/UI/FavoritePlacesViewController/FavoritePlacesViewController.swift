@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum collectionViewSettings: Int {
+fileprivate enum collectionViewSettings: Int {
     case spacing = 10
     case itemsCount = 2
 }
@@ -19,12 +19,11 @@ class FavoritePlacesViewController: UIViewController, UICollectionViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = UIColor.white
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationItem.title = "Favorite"
-
-        self.rootView.collectionView.register(cellClass: FavoritePlacesCollectionViewCell.self)
+        self.configureView()
+        self.configureCollectionView()
     }
+    
+    // MARK: - CollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionViewSettings.itemsCount.rawValue
@@ -54,5 +53,17 @@ class FavoritePlacesViewController: UIViewController, UICollectionViewDelegate, 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return CGFloat(collectionViewSettings.spacing.rawValue)
+    }
+    
+    // MARK: - Private
+    
+    private func configureView() {
+        self.view.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.title = VCTitles.favorite.rawValue
+    }
+    
+    private func configureCollectionView() {
+        self.rootView.collectionView.register(cellClass: FavoritePlacesCollectionViewCell.self)
     }
 }

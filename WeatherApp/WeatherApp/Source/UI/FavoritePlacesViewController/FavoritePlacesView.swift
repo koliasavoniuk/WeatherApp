@@ -10,6 +10,7 @@ import UIKit
 
 class FavoritePlacesView: UIView {
 
+    // MARK: - Outlets
     @IBOutlet var collectionView: UICollectionView!
     
 

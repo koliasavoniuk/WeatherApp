@@ -10,6 +10,7 @@ import UIKit
 
 class DailyForecastView: UIView {
 
+    // MARK: - Outlets
     @IBOutlet var tableView: UITableView!
     
     

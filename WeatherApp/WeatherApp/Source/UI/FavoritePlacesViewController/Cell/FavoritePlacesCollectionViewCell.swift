@@ -9,6 +9,8 @@
 import UIKit
 
 class FavoritePlacesCollectionViewCell: UICollectionViewCell {
+    
+    // MARK: - Outlets
     @IBOutlet var cityLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var temperatureLabel: UILabel!

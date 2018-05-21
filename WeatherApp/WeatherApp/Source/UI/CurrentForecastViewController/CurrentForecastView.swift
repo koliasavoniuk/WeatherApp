@@ -9,6 +9,8 @@
 import UIKit
 
 class CurrentForecastView: UIView {
+    
+    // MARK: - Outlets
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var windspeedLabel: UILabel!
     @IBOutlet var millimetersOfMercuryLabel: UILabel!

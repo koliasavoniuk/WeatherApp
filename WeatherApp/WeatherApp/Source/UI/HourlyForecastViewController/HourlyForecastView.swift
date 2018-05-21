@@ -10,6 +10,7 @@ import UIKit
 
 class HourlyForecastView: UIView {
     
+    // MARK: - Outlets
     @IBOutlet var tableView: UITableView!
 
 }

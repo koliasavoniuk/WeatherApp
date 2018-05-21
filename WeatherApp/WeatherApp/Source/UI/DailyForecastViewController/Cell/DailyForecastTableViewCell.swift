@@ -9,6 +9,8 @@
 import UIKit
 
 class DailyForecastTableViewCell: UITableViewCell {
+    
+    // MARK: - Outlets
     @IBOutlet var weekdayLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var weatherImage: UIImageView!
