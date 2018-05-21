@@ -31,9 +31,9 @@ class FavoritePlacesViewController: UIViewController, UICollectionViewDelegate, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: toString(FavoritePlacesCollectionViewCell.self), for: indexPath)
+        let cell: FavoritePlacesCollectionViewCell? = cast(collectionView.dequeueReusableCell(withCellClass: FavoritePlacesCollectionViewCell.self, for: indexPath))
         
-        return cell
+        return cell ?? UICollectionViewCell()
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout

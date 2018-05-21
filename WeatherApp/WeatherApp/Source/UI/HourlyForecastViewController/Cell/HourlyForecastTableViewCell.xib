@@ -23,8 +23,14 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="XDD-fY-9RC">
                         <rect key="frame" x="10" y="10" width="75" height="109.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-B6-efY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-B6-efY">
                                 <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJe-9N-mQH">
+                                <rect key="frame" x="0.0" y="44.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -90,6 +96,16 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="RDn-L9-eel" id="3xq-Bf-2N4"/>
+                <outlet property="humidityLabel" destination="Fr8-SU-8b8" id="pgT-ZB-qr7"/>
+                <outlet property="millimetersOfMercuryLabel" destination="jTd-Dc-ROI" id="T7P-9c-al7"/>
+                <outlet property="temperatureLabel" destination="Ymk-nn-6ri" id="d1n-pF-7zo"/>
+                <outlet property="timeLabel" destination="5sa-B6-efY" id="SP0-WZ-RSd"/>
+                <outlet property="weatherImage" destination="eDl-Gv-NJG" id="Kp8-cv-eTn"/>
+                <outlet property="weekdayLabel" destination="nJe-9N-mQH" id="liJ-LH-vEj"/>
+                <outlet property="windSpeedLabel" destination="Yvw-pT-tLw" id="ksY-rR-qAe"/>
+            </connections>
             <point key="canvasLocation" x="3.5" y="112"/>
         </tableViewCell>
     </objects>

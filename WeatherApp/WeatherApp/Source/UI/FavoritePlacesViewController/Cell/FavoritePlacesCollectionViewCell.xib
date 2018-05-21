@@ -52,6 +52,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="150" height="150"/>
+            <connections>
+                <outlet property="cityLabel" destination="UI5-zb-9iv" id="lpn-5t-Wdy"/>
+                <outlet property="temperatureLabel" destination="REw-nb-hUX" id="RiL-qO-1m6"/>
+                <outlet property="timeLabel" destination="3ed-cD-4Nc" id="aOi-n4-6xM"/>
+            </connections>
             <point key="canvasLocation" x="75" y="102"/>
         </collectionViewCell>
     </objects>

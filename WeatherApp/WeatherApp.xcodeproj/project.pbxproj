@@ -37,6 +37,7 @@
 		76B732F520AAB238004A7D73 /* FavoritePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732F320AAB238004A7D73 /* FavoritePlacesViewController.swift */; };
 		76B732F620AAB238004A7D73 /* FavoritePlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732F420AAB238004A7D73 /* FavoritePlacesViewController.xib */; };
 		76B732F820AAB252004A7D73 /* FavoritePlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732F720AAB252004A7D73 /* FavoritePlacesView.swift */; };
+		76D5512C20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5512B20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		76B732F320AAB238004A7D73 /* FavoritePlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlacesViewController.swift; sourceTree = "<group>"; };
 		76B732F420AAB238004A7D73 /* FavoritePlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritePlacesViewController.xib; sourceTree = "<group>"; };
 		76B732F720AAB252004A7D73 /* FavoritePlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlacesView.swift; sourceTree = "<group>"; };
+		76D5512B20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 				765CA62420AEEF44003D293B /* FoundationKitFunctions.swift */,
 				765CA62B20AEF227003D293B /* UITableView+Dequeue.swift */,
 				765CA63720AF1B55003D293B /* UICollectionView+Extensions.swift */,
+				76D5512B20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				76B732B920A98D16004A7D73 /* AppDelegate.swift in Sources */,
 				76B732D520A98DE5004A7D73 /* MainTabBarView.swift in Sources */,
 				76B732DD20A9910D004A7D73 /* DailyForecastViewController.swift in Sources */,
+				76D5512C20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift in Sources */,
 				765CA62520AEEF44003D293B /* FoundationKitFunctions.swift in Sources */,
 				765CA63020AF0236003D293B /* HourlyForecastTableViewCell.swift in Sources */,
 			);

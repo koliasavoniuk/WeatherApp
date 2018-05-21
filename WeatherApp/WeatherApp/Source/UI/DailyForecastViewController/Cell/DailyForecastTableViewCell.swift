@@ -9,14 +9,12 @@
 import UIKit
 
 class DailyForecastTableViewCell: UITableViewCell {
-
-    @IBOutlet var timeLabel: UILabel!
     @IBOutlet var weekdayLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var weatherImage: UIImageView!
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var windSpeedLabel: UILabel!
-    @IBOutlet var millimeterOfMercureLabel: UILabel!
+    @IBOutlet var millimetersOfMercuryLabel: UILabel!
     @IBOutlet var humidityLabel: UILabel!    
     
     override func awakeFromNib() {

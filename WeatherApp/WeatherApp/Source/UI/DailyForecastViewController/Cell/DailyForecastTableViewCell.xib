@@ -23,14 +23,8 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Dlu-TI-Wqt">
                         <rect key="frame" x="10" y="10" width="100" height="109.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHJ-Wl-nHg">
-                                <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plq-A7-Zc0">
-                                <rect key="frame" x="0.0" y="44.5" width="42" height="20.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -99,9 +93,8 @@
             <connections>
                 <outlet property="dateLabel" destination="fDb-Kd-egw" id="Dht-26-Kar"/>
                 <outlet property="humidityLabel" destination="a9W-zb-sAs" id="W1i-xC-dmb"/>
-                <outlet property="millimeterOfMercureLabel" destination="unF-YQ-sKZ" id="04R-xu-tIU"/>
+                <outlet property="millimetersOfMercuryLabel" destination="unF-YQ-sKZ" id="RTI-iP-okE"/>
                 <outlet property="temperatureLabel" destination="XFv-46-Jrk" id="WXB-i0-aGF"/>
-                <outlet property="timeLabel" destination="vHJ-Wl-nHg" id="icE-jp-Oyr"/>
                 <outlet property="weatherImage" destination="piQ-Eo-llU" id="kKQ-yH-CdQ"/>
                 <outlet property="weekdayLabel" destination="Plq-A7-Zc0" id="UZ9-9G-ald"/>
                 <outlet property="windSpeedLabel" destination="vQ6-9T-UwZ" id="FVF-tf-Lxl"/>

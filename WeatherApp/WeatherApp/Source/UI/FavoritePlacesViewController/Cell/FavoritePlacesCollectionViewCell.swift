@@ -9,7 +9,10 @@
 import UIKit
 
 class FavoritePlacesCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet var cityLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    @IBOutlet var temperatureLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
