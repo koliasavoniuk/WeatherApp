@@ -38,6 +38,7 @@
 		76B732F620AAB238004A7D73 /* FavoritePlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732F420AAB238004A7D73 /* FavoritePlacesViewController.xib */; };
 		76B732F820AAB252004A7D73 /* FavoritePlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732F720AAB252004A7D73 /* FavoritePlacesView.swift */; };
 		76D5512C20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5512B20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift */; };
+		76D5513020B307090096C2AC /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5512F20B307090096C2AC /* ObservableObject.swift */; };
 		C23EBFDE7377F9948B7A6966 /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150873BBEF8B5915FAAE618B /* Pods_WeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		76B732F420AAB238004A7D73 /* FavoritePlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritePlacesViewController.xib; sourceTree = "<group>"; };
 		76B732F720AAB252004A7D73 /* FavoritePlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlacesView.swift; sourceTree = "<group>"; };
 		76D5512B20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
+		76D5512F20B307090096C2AC /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		AC0FE8F58678D9417C900810 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		B6C5D2AEF05DE66520A4DE56 /* Pods-WeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,8 +172,8 @@
 		76B732CD20A98D78004A7D73 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				76B732F120A9AFA6004A7D73 /* Extensions */,
 				76B732E720A998F9004A7D73 /* Constants */,
+				76D5512D20B306E20096C2AC /* Libs */,
 				76B732CE20A98D89004A7D73 /* UI */,
 			);
 			path = Source;
@@ -260,6 +262,23 @@
 				76B732F720AAB252004A7D73 /* FavoritePlacesView.swift */,
 			);
 			path = FavoritePlacesViewController;
+			sourceTree = "<group>";
+		};
+		76D5512D20B306E20096C2AC /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				76B732F120A9AFA6004A7D73 /* Extensions */,
+				76D5512E20B306EE0096C2AC /* ObservableObject */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		76D5512E20B306EE0096C2AC /* ObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+				76D5512F20B307090096C2AC /* ObservableObject.swift */,
+			);
+			path = ObservableObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +416,7 @@
 				765CA63820AF1B55003D293B /* UICollectionView+Extensions.swift in Sources */,
 				76B732E920A9991B004A7D73 /* CommonConstants.swift in Sources */,
 				76B732E120A99123004A7D73 /* HourlyForecastViewController.swift in Sources */,
+				76D5513020B307090096C2AC /* ObservableObject.swift in Sources */,
 				76B732B920A98D16004A7D73 /* AppDelegate.swift in Sources */,
 				76B732D520A98DE5004A7D73 /* MainTabBarView.swift in Sources */,
 				76B732DD20A9910D004A7D73 /* DailyForecastViewController.swift in Sources */,
