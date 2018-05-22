@@ -25,8 +25,15 @@ final class CoordsWeatherProvider: ObservableObject, NetworkProvider {
             .validate()
             .responseJSON{ (response) -> Void in
                 
-                let value = response.result
-                print(value)
+                switch response.result {
+                case .success(let value):
+                    self.state = .didLoad
+                    print(value)
+                    
+                case .failure(let error):
+                    self.state = .failLoading(error: String(describing: error))
+                }
+
             }
     }
     
