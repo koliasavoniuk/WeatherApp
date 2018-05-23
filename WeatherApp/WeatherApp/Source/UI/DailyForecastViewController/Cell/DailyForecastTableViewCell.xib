@@ -93,7 +93,7 @@
             <connections>
                 <outlet property="dateLabel" destination="fDb-Kd-egw" id="Dht-26-Kar"/>
                 <outlet property="humidityLabel" destination="a9W-zb-sAs" id="W1i-xC-dmb"/>
-                <outlet property="millimetersOfMercuryLabel" destination="unF-YQ-sKZ" id="RTI-iP-okE"/>
+                <outlet property="pressureLabel" destination="unF-YQ-sKZ" id="zh3-8t-Iyz"/>
                 <outlet property="temperatureLabel" destination="XFv-46-Jrk" id="WXB-i0-aGF"/>
                 <outlet property="weatherImage" destination="piQ-Eo-llU" id="kKQ-yH-CdQ"/>
                 <outlet property="weekdayLabel" destination="Plq-A7-Zc0" id="UZ9-9G-ald"/>

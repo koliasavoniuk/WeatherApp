@@ -16,7 +16,7 @@ class DailyForecastTableViewCell: UITableViewCell {
     @IBOutlet var weatherImage: UIImageView!
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var windSpeedLabel: UILabel!
-    @IBOutlet var millimetersOfMercuryLabel: UILabel!
+    @IBOutlet var pressureLabel: UILabel!
     @IBOutlet var humidityLabel: UILabel!    
     
     override func awakeFromNib() {

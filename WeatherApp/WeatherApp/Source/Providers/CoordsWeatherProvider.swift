@@ -12,7 +12,7 @@ import Alamofire
 final class CoordsWeatherProvider: ObservableObject, NetworkProvider {
     let url = URL(string: "https://api.openweathermap.org/data/2.5/weather") ?? URL(fileURLWithPath: "")
     
-    let parameters = ["q": "Boston",
+    let parameters = ["q": "Kyiv",
                       "APPID" : "e6274a1ed80da6b1a0f04eaaaf73806c"]
     
     func execute() {
@@ -27,15 +27,22 @@ final class CoordsWeatherProvider: ObservableObject, NetworkProvider {
                 
                 switch response.result {
                 case .success(let value):
-                    self.state = .didLoad
                     print(value)
+                    
+                    do {
+                        let decoder = JSONDecoder()
+                        let weatherData = try decoder.decode(CurrentWeatherModel.self, from: response.data!)
+                        
+                        print(weatherData)
+                        
+                        self.state = .didLoad
+                    } catch {
+                        self.state = .failLoading(error: "Can't parse JSON")
+                    }
                     
                 case .failure(let error):
                     self.state = .failLoading(error: String(describing: error))
                 }
-
             }
     }
-    
-    
 }

@@ -99,7 +99,7 @@
             <connections>
                 <outlet property="dateLabel" destination="RDn-L9-eel" id="3xq-Bf-2N4"/>
                 <outlet property="humidityLabel" destination="Fr8-SU-8b8" id="pgT-ZB-qr7"/>
-                <outlet property="millimetersOfMercuryLabel" destination="jTd-Dc-ROI" id="T7P-9c-al7"/>
+                <outlet property="pressureLabel" destination="jTd-Dc-ROI" id="k0z-yr-qqT"/>
                 <outlet property="temperatureLabel" destination="Ymk-nn-6ri" id="d1n-pF-7zo"/>
                 <outlet property="timeLabel" destination="5sa-B6-efY" id="SP0-WZ-RSd"/>
                 <outlet property="weatherImage" destination="eDl-Gv-NJG" id="Kp8-cv-eTn"/>

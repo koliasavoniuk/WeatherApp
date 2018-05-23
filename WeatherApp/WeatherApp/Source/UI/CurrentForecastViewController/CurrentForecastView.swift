@@ -13,7 +13,7 @@ class CurrentForecastView: UIView {
     // MARK: - Outlets
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var windspeedLabel: UILabel!
-    @IBOutlet var millimetersOfMercuryLabel: UILabel!
+    @IBOutlet var pressureLabel: UILabel!
     @IBOutlet var humidityLabel: UILabel!
     @IBOutlet var weatherImage: UIImageView!
     @IBOutlet var weatherDescription: UILabel!
