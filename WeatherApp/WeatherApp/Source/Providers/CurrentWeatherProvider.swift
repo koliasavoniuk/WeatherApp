@@ -1,5 +1,5 @@
 //
-//  CoordsWeatherProvider.swift
+//  CurrentWeatherProvider.swift
 //  WeatherApp
 //
 //  Created by Mykola Savoniuk on 5/22/18.
@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-final class CoordsWeatherProvider: ObservableObject, NetworkProvider {
+final class CurrentWeatherProvider: ObservableObject, NetworkProvider {
     var result: CurrentWeatherModel?
     
     let url = URL(string: "https://api.openweathermap.org/data/2.5/weather") ?? URL(fileURLWithPath: "")
