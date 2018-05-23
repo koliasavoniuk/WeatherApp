@@ -30,8 +30,20 @@ struct Wind: Decodable {
     }
 }
 
+struct Weather: Decodable {
+    let description: String
+}
+
 struct CurrentWeatherModel: Decodable {
     let name: String
     let main: Main
     let wind: Wind
+    let description: [Weather]
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case main
+        case wind
+        case description = "weather"
+    }
 }

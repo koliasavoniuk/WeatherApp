@@ -12,7 +12,9 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
 
     // MARK: - Properties
     
-    private var coordsWeatherProvider: CoordsWeatherProvider?
+    @IBOutlet var rootView: CurrentForecastView!
+    
+    private var coordsWeatherProvider = CoordsWeatherProvider()
     
     // MARK: - ViewController Lifecycle
     
@@ -21,10 +23,9 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
         
         self.configureView()
         
-        var coordsWeatherProvider = self.coordsWeatherProvider
-        coordsWeatherProvider = CoordsWeatherProvider()
-        coordsWeatherProvider?.delegate = self
-        coordsWeatherProvider?.execute()
+        self.coordsWeatherProvider = CoordsWeatherProvider()
+        self.coordsWeatherProvider.delegate = self
+        self.coordsWeatherProvider.execute()
     }
     
     // MARK: - Private
@@ -42,7 +43,9 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
     }
     
     func modelDidLoad(observableObject: AnyObject) {
-        print("ModelDidLoad")
+        self.coordsWeatherProvider.result.map {
+            self.rootView.fill(with: $0)
+        }
     }
     
     func modelNotLoaded(observableObject: AnyObject) {

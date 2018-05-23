@@ -10,6 +10,8 @@ import Foundation
 import Alamofire
 
 final class CoordsWeatherProvider: ObservableObject, NetworkProvider {
+    var result: CurrentWeatherModel?
+    
     let url = URL(string: "https://api.openweathermap.org/data/2.5/weather") ?? URL(fileURLWithPath: "")
     
     let parameters = ["q": "Kyiv",
@@ -26,16 +28,15 @@ final class CoordsWeatherProvider: ObservableObject, NetworkProvider {
             .responseJSON{ (response) -> Void in
                 
                 switch response.result {
-                case .success(let value):
-                    print(value)
+                case .success( _):
                     
                     do {
                         let decoder = JSONDecoder()
                         let weatherData = try decoder.decode(CurrentWeatherModel.self, from: response.data!)
                         
-                        print(weatherData)
-                        
+                        self.result = weatherData
                         self.state = .didLoad
+                        
                     } catch {
                         self.state = .failLoading(error: "Can't parse JSON")
                     }
