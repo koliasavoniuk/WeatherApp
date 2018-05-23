@@ -8,15 +8,21 @@
 
 import UIKit
 
-class HourlyForecastViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: - Properties
     
     @IBOutlet var rootView: HourlyForecastView!
+    private var hourlyForecastProvider: HourlyForecastProvider?
+    
+    // MARK: - ViewController Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.configureView()
         self.configureTableVC()
+        self.startProvider()
     }
     
     // MARK: - UITableViewDataSource
@@ -31,10 +37,6 @@ class HourlyForecastViewController: UIViewController, UITableViewDataSource, UIT
         return cell ?? UITableViewCell()
     }
     
-    //func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //return 150
-    //}
-    
     // MARK: - Private
     
     private func configureView() {
@@ -43,7 +45,31 @@ class HourlyForecastViewController: UIViewController, UITableViewDataSource, UIT
         self.navigationItem.title = VCTitles.hourly.rawValue
     }
     
+    private func startProvider() {
+        self.hourlyForecastProvider = HourlyForecastProvider()
+        self.hourlyForecastProvider?.delegate = self
+        self.hourlyForecastProvider?.execute()
+    }
+    
     private func configureTableVC() {
         self.rootView.tableView.register(cells: HourlyForecastTableViewCell.self)
+    }
+    
+    // MARK: - Observable Object Delegate
+    
+    func modelWillLoad(observableObject: AnyObject) {
+        print("ModelWillLoad")
+    }
+    
+    func modelDidLoad(observableObject: AnyObject) {
+        print("ModelDidLoad")
+    }
+    
+    func modelNotLoaded(observableObject: AnyObject) {
+        print("ModelNotLoaded")
+    }
+    
+    func modelFailLoading(observableObject: AnyObject, error: String) {
+        print("ModelFailLoading")
     }
 }
