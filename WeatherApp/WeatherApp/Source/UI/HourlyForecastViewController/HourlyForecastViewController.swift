@@ -13,7 +13,7 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
     // MARK: - Properties
     
     @IBOutlet var rootView: HourlyForecastView!
-    private var hourlyForecastProvider: HourlyForecastProvider<HourlyForecastModel>?
+    private var weatherProvider: WeatherProvider<HourlyForecastModel>?
     
     // MARK: - ViewController Lifecycle
     
@@ -28,13 +28,13 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.hourlyForecastProvider?.result?.list.count ?? 0
+        return self.weatherProvider?.result?.list.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:HourlyForecastTableViewCell? = cast(tableView.dequeueReusableCell(withCellClass: HourlyForecastTableViewCell.self, for: indexPath))
         
-        self.hourlyForecastProvider?.result.map {
+        self.weatherProvider?.result.map {
             cell?.fill(with: $0.list[indexPath.row])
         }
         
@@ -50,9 +50,16 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
     }
     
     private func startProvider() {
-        self.hourlyForecastProvider = HourlyForecastProvider()
-        self.hourlyForecastProvider?.delegate = self
-        self.hourlyForecastProvider?.execute()
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast") ?? URL(fileURLWithPath: "")
+        
+        let parameters = [
+            "q": "Kyiv",
+            "APPID" : "e6274a1ed80da6b1a0f04eaaaf73806c"
+        ]
+        
+        self.weatherProvider = WeatherProvider(with: url, parameters: parameters)
+        self.weatherProvider?.delegate = self
+        self.weatherProvider?.execute()
     }
     
     private func configureTableVC() {

@@ -1,25 +1,25 @@
 //
-//  HourlyForecastProvider.swift
+//  WeatherProvider.swift
 //  WeatherApp
 //
-//  Created by Mykola Savoniuk on 5/23/18.
+//  Created by Mykola Savoniuk on 5/24/18.
 //  Copyright © 2018 Mykola Savoniuk. All rights reserved.
 //
 
 import Foundation
 
-final class HourlyForecastProvider<ModelType>: ObservableObject, NetworkProtocol, AlamofireRequest
+final class WeatherProvider<ModelType>: ObservableObject, AlamofireRequest
     where ModelType: Decodable
 {
     var result: ModelType?
+    let url: URL
+    let parameters: [String: String]
     
-    let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast") ?? URL(fileURLWithPath: "")
-    
-    let parameters = [
-        "q": "Kyiv",
-        "APPID" : "e6274a1ed80da6b1a0f04eaaaf73806c"
-    ]
-    
+    init(with url: URL, parameters: [String: String]) {
+        self.url = url
+        self.parameters = parameters
+    }
+
     func execute() {
         self.request(with: self.url, parameters: self.parameters) { result in
             switch result {

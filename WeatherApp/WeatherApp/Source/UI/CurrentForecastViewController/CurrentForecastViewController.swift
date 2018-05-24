@@ -13,7 +13,7 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
     // MARK: - Properties
     
     @IBOutlet var rootView: CurrentForecastView!
-    private var currentWeatherProvider: CurrentWeatherProvider<CurrentWeatherModel>?
+    private var weatherProvider: WeatherProvider<CurrentWeatherModel>?
     
     // MARK: - ViewController Lifecycle
     
@@ -33,9 +33,16 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
     }
     
     private func startProvider() {
-        self.currentWeatherProvider = CurrentWeatherProvider()
-        self.currentWeatherProvider?.delegate = self
-        self.currentWeatherProvider?.execute()
+        let url = URL(string: "https://api.openweathermap.org/data/2.5/weather") ?? URL(fileURLWithPath: "")
+        
+        let parameters = [
+            "q": "Kyiv",
+            "APPID" : "e6274a1ed80da6b1a0f04eaaaf73806c"
+        ]
+        
+        self.weatherProvider = WeatherProvider(with: url, parameters: parameters)
+        self.weatherProvider?.delegate = self
+        self.weatherProvider?.execute()
     }
     
     // MARK: - Observable Object Delegate
@@ -45,7 +52,7 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
     }
     
     func modelDidLoad(observableObject: AnyObject) {
-        self.currentWeatherProvider?.result.map {
+        self.weatherProvider?.result.map {
             self.rootView.fill(with: $0)
         }
     }
