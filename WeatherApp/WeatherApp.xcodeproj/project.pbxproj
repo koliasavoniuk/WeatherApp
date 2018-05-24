@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		765CA62020AECE8C003D293B /* DailyForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA61E20AECE8C003D293B /* DailyForecastTableViewCell.swift */; };
-		765CA62120AECE8C003D293B /* DailyForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765CA61F20AECE8C003D293B /* DailyForecastTableViewCell.xib */; };
 		765CA62320AEEF11003D293B /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA62220AEEF11003D293B /* UITableView+Extensions.swift */; };
 		765CA62520AEEF44003D293B /* FoundationKitFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA62420AEEF44003D293B /* FoundationKitFunctions.swift */; };
 		765CA62C20AEF227003D293B /* UITableView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA62B20AEF227003D293B /* UITableView+Dequeue.swift */; };
@@ -28,9 +26,6 @@
 		76B732D220A98DD2004A7D73 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732D020A98DD2004A7D73 /* MainTabBarViewController.swift */; };
 		76B732D320A98DD2004A7D73 /* MainTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732D120A98DD2004A7D73 /* MainTabBarViewController.xib */; };
 		76B732D520A98DE5004A7D73 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732D420A98DE5004A7D73 /* MainTabBarView.swift */; };
-		76B732DA20A990F9004A7D73 /* DailyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732D920A990F9004A7D73 /* DailyForecastView.swift */; };
-		76B732DD20A9910D004A7D73 /* DailyForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732DB20A9910D004A7D73 /* DailyForecastViewController.swift */; };
-		76B732DE20A9910D004A7D73 /* DailyForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732DC20A9910D004A7D73 /* DailyForecastViewController.xib */; };
 		76B732E120A99123004A7D73 /* HourlyForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732DF20A99123004A7D73 /* HourlyForecastViewController.swift */; };
 		76B732E220A99123004A7D73 /* HourlyForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732E020A99123004A7D73 /* HourlyForecastViewController.xib */; };
 		76B732E420A99139004A7D73 /* HourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732E320A99139004A7D73 /* HourlyForecastView.swift */; };
@@ -48,8 +43,6 @@
 
 /* Begin PBXFileReference section */
 		150873BBEF8B5915FAAE618B /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		765CA61E20AECE8C003D293B /* DailyForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastTableViewCell.swift; sourceTree = "<group>"; };
-		765CA61F20AECE8C003D293B /* DailyForecastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyForecastTableViewCell.xib; sourceTree = "<group>"; };
 		765CA62220AEEF11003D293B /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		765CA62420AEEF44003D293B /* FoundationKitFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationKitFunctions.swift; sourceTree = "<group>"; };
 		765CA62B20AEF227003D293B /* UITableView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue.swift"; sourceTree = "<group>"; };
@@ -71,9 +64,6 @@
 		76B732D020A98DD2004A7D73 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		76B732D120A98DD2004A7D73 /* MainTabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarViewController.xib; sourceTree = "<group>"; };
 		76B732D420A98DE5004A7D73 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
-		76B732D920A990F9004A7D73 /* DailyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastView.swift; sourceTree = "<group>"; };
-		76B732DB20A9910D004A7D73 /* DailyForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastViewController.swift; sourceTree = "<group>"; };
-		76B732DC20A9910D004A7D73 /* DailyForecastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyForecastViewController.xib; sourceTree = "<group>"; };
 		76B732DF20A99123004A7D73 /* HourlyForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastViewController.swift; sourceTree = "<group>"; };
 		76B732E020A99123004A7D73 /* HourlyForecastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyForecastViewController.xib; sourceTree = "<group>"; };
 		76B732E320A99139004A7D73 /* HourlyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastView.swift; sourceTree = "<group>"; };
@@ -117,15 +107,6 @@
 				150873BBEF8B5915FAAE618B /* Pods_WeatherApp.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		765CA61D20AECE73003D293B /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				765CA61E20AECE8C003D293B /* DailyForecastTableViewCell.swift */,
-				765CA61F20AECE8C003D293B /* DailyForecastTableViewCell.xib */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		765CA62D20AF020A003D293B /* Cell */ = {
@@ -212,7 +193,6 @@
 			children = (
 				76B732F220AAB15A004A7D73 /* FavoritePlacesViewController */,
 				76B732EA20A9AD33004A7D73 /* CurrentForecastViewController */,
-				76B732D820A990DF004A7D73 /* DailyForecastViewController */,
 				76B732D620A990B9004A7D73 /* HourlyForecastViewController */,
 				76B732CF20A98D96004A7D73 /* MainTabBarController */,
 			);
@@ -238,17 +218,6 @@
 				76B732E320A99139004A7D73 /* HourlyForecastView.swift */,
 			);
 			path = HourlyForecastViewController;
-			sourceTree = "<group>";
-		};
-		76B732D820A990DF004A7D73 /* DailyForecastViewController */ = {
-			isa = PBXGroup;
-			children = (
-				765CA61D20AECE73003D293B /* Cell */,
-				76B732DB20A9910D004A7D73 /* DailyForecastViewController.swift */,
-				76B732DC20A9910D004A7D73 /* DailyForecastViewController.xib */,
-				76B732D920A990F9004A7D73 /* DailyForecastView.swift */,
-			);
-			path = DailyForecastViewController;
 			sourceTree = "<group>";
 		};
 		76B732E720A998F9004A7D73 /* Constants */ = {
@@ -374,8 +343,6 @@
 				765CA63120AF0236003D293B /* HourlyForecastTableViewCell.xib in Resources */,
 				76B732F020A9AD67004A7D73 /* CurrentForecastViewController.xib in Resources */,
 				76B732D320A98DD2004A7D73 /* MainTabBarViewController.xib in Resources */,
-				76B732DE20A9910D004A7D73 /* DailyForecastViewController.xib in Resources */,
-				765CA62120AECE8C003D293B /* DailyForecastTableViewCell.xib in Resources */,
 				76B732C620A98D16004A7D73 /* LaunchScreen.storyboard in Resources */,
 				76B732C320A98D16004A7D73 /* Assets.xcassets in Resources */,
 				765CA63620AF168C003D293B /* FavoritePlacesCollectionViewCell.xib in Resources */,
@@ -434,13 +401,11 @@
 				768ADE6920B4412B00F63095 /* CurrentWeatherModel.swift in Sources */,
 				76B732F520AAB238004A7D73 /* FavoritePlacesViewController.swift in Sources */,
 				76B732E420A99139004A7D73 /* HourlyForecastView.swift in Sources */,
-				765CA62020AECE8C003D293B /* DailyForecastTableViewCell.swift in Sources */,
 				768ADE7320B6BF4100F63095 /* AlamofireRequest.swift in Sources */,
 				76B732EC20A9AD56004A7D73 /* CurrentForecastView.swift in Sources */,
 				768ADE7520B6C40E00F63095 /* WeatherProvider.swift in Sources */,
 				76B732D220A98DD2004A7D73 /* MainTabBarViewController.swift in Sources */,
 				76B732EF20A9AD67004A7D73 /* CurrentForecastViewController.swift in Sources */,
-				76B732DA20A990F9004A7D73 /* DailyForecastView.swift in Sources */,
 				76B732F820AAB252004A7D73 /* FavoritePlacesView.swift in Sources */,
 				765CA63520AF168C003D293B /* FavoritePlacesCollectionViewCell.swift in Sources */,
 				76B732C120A98D16004A7D73 /* WeatherApp.xcdatamodeld in Sources */,
@@ -451,7 +416,6 @@
 				76B732B920A98D16004A7D73 /* AppDelegate.swift in Sources */,
 				76B732D520A98DE5004A7D73 /* MainTabBarView.swift in Sources */,
 				768ADE6D20B56DF200F63095 /* HourlyForecastModel.swift in Sources */,
-				76B732DD20A9910D004A7D73 /* DailyForecastViewController.swift in Sources */,
 				76D5512C20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift in Sources */,
 				765CA62520AEEF44003D293B /* FoundationKitFunctions.swift in Sources */,
 				765CA63020AF0236003D293B /* HourlyForecastTableViewCell.swift in Sources */,

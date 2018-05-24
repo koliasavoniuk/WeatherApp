@@ -37,6 +37,7 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
         
         let parameters = [
             "q": "Kyiv",
+            "units": "metric",
             "APPID" : "e6274a1ed80da6b1a0f04eaaaf73806c"
         ]
         
