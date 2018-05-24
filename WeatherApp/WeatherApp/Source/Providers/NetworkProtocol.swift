@@ -1,5 +1,5 @@
 //
-//  NetworkProvider.swift
+//  NetworkProtocol.swift
 //  WeatherApp
 //
 //  Created by Mykola Savoniuk on 5/22/18.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol NetworkProvider {
+protocol NetworkProtocol {
     func execute()
 }
+

@@ -13,7 +13,7 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
     // MARK: - Properties
     
     @IBOutlet var rootView: CurrentForecastView!
-    private var currentWeatherProvider: CurrentWeatherProvider?
+    private var currentWeatherProvider: CurrentWeatherProvider<CurrentWeatherModel>?
     
     // MARK: - ViewController Lifecycle
     

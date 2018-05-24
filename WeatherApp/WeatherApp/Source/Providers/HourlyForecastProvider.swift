@@ -7,43 +7,39 @@
 //
 
 import Foundation
-import Alamofire
 
-final class HourlyForecastProvider: ObservableObject, NetworkProvider {
-    var result: HourlyForecastModel?
+final class HourlyForecastProvider<ModelType>: ObservableObject, NetworkProtocol, AlamofireRequest
+    where ModelType: Decodable
+{
+    var result: ModelType?
     
     let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast") ?? URL(fileURLWithPath: "")
     
-    let parameters = ["q": "Kyiv",
-                      "APPID" : "e6274a1ed80da6b1a0f04eaaaf73806c"]
+    let parameters = [
+        "q": "Kyiv",
+        "APPID" : "e6274a1ed80da6b1a0f04eaaaf73806c"
+    ]
     
     func execute() {
-        Alamofire
-            .request(
-                self.url,
-                method: .get,
-                parameters: self.parameters
-            )
-            .validate()
-            .responseJSON{ (response) -> Void in
+        self.request(with: self.url, parameters: self.parameters) { result in
+            switch result {
+            case let .success(data):
                 
-                switch response.result {
-                case .success( _):
+                do {
+                    let decoder = JSONDecoder()
+                    let weatherData = try decoder.decode(ModelType.self, from: data)
                     
-                    do {
-                        let decoder = JSONDecoder()
-                        let weatherData = try decoder.decode(HourlyForecastModel.self, from: response.data!)
-                        
-                        self.result = weatherData
-                        self.state = .didLoad
-                        
-                    } catch {
-                        self.state = .failLoading(error: "Can't parse JSON")
-                    }
+                    self.result = weatherData
+                    self.state = .didLoad
                     
-                case .failure(let error):
-                    self.state = .failLoading(error: String(describing: error))
+                } catch {
+                    self.state = .failLoading(error: "Can't parse JSON")
                 }
+                
+            case .failure(let error):
+                self.state = .failLoading(error: String(describing: error))
+            }
         }
+        
     }
 }

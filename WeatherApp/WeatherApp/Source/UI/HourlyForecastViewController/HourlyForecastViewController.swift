@@ -13,7 +13,7 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
     // MARK: - Properties
     
     @IBOutlet var rootView: HourlyForecastView!
-    private var hourlyForecastProvider: HourlyForecastProvider?
+    private var hourlyForecastProvider: HourlyForecastProvider<HourlyForecastModel>?
     
     // MARK: - ViewController Lifecycle
     
@@ -28,11 +28,15 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.hourlyForecastProvider?.result?.list.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:HourlyForecastTableViewCell? = cast(tableView.dequeueReusableCell(withCellClass: HourlyForecastTableViewCell.self, for: indexPath))
+        
+        self.hourlyForecastProvider?.result.map {
+            cell?.fill(with: $0.list[indexPath.row])
+        }
         
         return cell ?? UITableViewCell()
     }
@@ -62,7 +66,7 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
     }
     
     func modelDidLoad(observableObject: AnyObject) {
-        print("ModelDidLoad")
+        self.rootView.tableView.reloadData()
     }
     
     func modelNotLoaded(observableObject: AnyObject) {
