@@ -33,6 +33,8 @@ final class HourlyForecastTableViewCell: UITableViewCell {
         
         let date = Date(timeIntervalSince1970: TimeInterval(model.timestamp))
         self.processDate(date: date, formatter: formatter)
+        
+        self.backgroundColor = .clear
     }
     
     // MARK: - Private

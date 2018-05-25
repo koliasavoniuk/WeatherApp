@@ -12,5 +12,10 @@ class HourlyForecastView: UIView {
     
     // MARK: - Outlets
     @IBOutlet var tableView: UITableView!
-
+    @IBOutlet var backgroundImageView: UIImageView!
+    
+    func prepareView() {
+        self.backgroundImageView.image = UIImage(named: "cloudy_background")
+        self.tableView.backgroundView = self.backgroundImageView
+    }
 }
