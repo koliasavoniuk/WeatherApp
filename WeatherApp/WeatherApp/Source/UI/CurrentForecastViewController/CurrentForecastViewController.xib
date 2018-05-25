@@ -13,6 +13,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CurrentForecastViewController" customModule="WeatherApp" customModuleProvider="target">
             <connections>
+                <outlet property="rootView" destination="i5M-Pr-FkT" id="qM1-ve-bVv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -83,7 +84,7 @@
             <viewLayoutGuide key="safeArea" id="JKW-X8-7ct"/>
             <connections>
                 <outlet property="humidityLabel" destination="wRB-jh-XGU" id="Rcq-fa-fgk"/>
-                <outlet property="millimetersOfMercuryLabel" destination="GnQ-IH-1R6" id="XD5-oD-SLG"/>
+                <outlet property="pressureLabel" destination="GnQ-IH-1R6" id="YSq-4S-nb9"/>
                 <outlet property="temperatureLabel" destination="TEy-cN-f8l" id="jPa-bk-S0B"/>
                 <outlet property="weatherDescription" destination="AWr-RB-Phb" id="eso-ki-OST"/>
                 <outlet property="weatherImage" destination="VWm-oH-gBc" id="JhF-v2-Ae6"/>

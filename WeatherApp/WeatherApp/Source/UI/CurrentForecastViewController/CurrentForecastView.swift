@@ -10,11 +10,22 @@ import UIKit
 
 class CurrentForecastView: UIView {
     
-    // MARK: - Outlets
+     // MARK: - Outlets
+    
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var windspeedLabel: UILabel!
-    @IBOutlet var millimetersOfMercuryLabel: UILabel!
+    @IBOutlet var pressureLabel: UILabel!
     @IBOutlet var humidityLabel: UILabel!
     @IBOutlet var weatherImage: UIImageView!
     @IBOutlet var weatherDescription: UILabel!
+   
+    // MARK: - Outlets
+    
+    func fill(with model: CurrentWeatherModel) {
+        self.temperatureLabel.text = String(model.main.temperature)
+        self.windspeedLabel.text = String(model.wind.speed)
+        self.pressureLabel.text = String(model.main.pressure)
+        self.humidityLabel.text = String(model.main.humidity)
+        self.weatherDescription.text = String(describing: model.description.first?.description ?? "")
+    }
 }

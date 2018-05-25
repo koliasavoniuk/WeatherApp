@@ -8,20 +8,46 @@
 
 import UIKit
 
-class HourlyForecastTableViewCell: UITableViewCell {
+final class HourlyForecastTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
+    
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var weekdayLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var weatherImage: UIImageView!
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var windSpeedLabel: UILabel!
-    @IBOutlet var millimetersOfMercuryLabel: UILabel!
+    @IBOutlet var pressureLabel: UILabel!
     @IBOutlet var humidityLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // MARK: - Public
+    
+    // Formatter created once in controller,
+    //because creating new DateFormatter for every cell is very expensive operation
+    func fill(with model: HourlyForecastItem, formatter: DateFormatter) {
+        self.temperatureLabel.text = String(model.main.temperature)
+        self.windSpeedLabel.text = String(model.wind.speed)
+        self.pressureLabel.text = String(model.main.pressure)
+        self.humidityLabel.text = String(model.main.humidity)
+        
+        let date = Date(timeIntervalSince1970: TimeInterval(model.timestamp))
+        self.processDate(date: date, formatter: formatter)
+    }
+    
+    // MARK: - Private
+    
+    private func processDate(date: Date, formatter: DateFormatter) {
+        let formatter = formatter
+        formatter.dateFormat = "MMM dd/HH:mm"
+        
+        let splitDate = formatter.string(from: date).split(separator: "/")
+        
+        let weekDay = formatter.weekdaySymbols[Calendar.current.component(.weekday, from: date) - 1]
+        
+        self.weekdayLabel.text = weekDay
+        self.dateLabel.text = String(splitDate[0])
+        self.timeLabel.text = String(splitDate[1])
+
     }
 }
