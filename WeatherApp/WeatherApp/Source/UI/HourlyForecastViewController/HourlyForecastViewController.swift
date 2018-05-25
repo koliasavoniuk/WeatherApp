@@ -14,6 +14,7 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
     
     @IBOutlet var rootView: HourlyForecastView!
     private var weatherProvider: WeatherProvider<HourlyForecastModel>?
+    private let formatter = DateFormatter()
     
     // MARK: - ViewController Lifecycle
     
@@ -35,7 +36,7 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
         let cell:HourlyForecastTableViewCell? = cast(tableView.dequeueReusableCell(withCellClass: HourlyForecastTableViewCell.self, for: indexPath))
         
         self.weatherProvider?.result.map {
-            cell?.fill(with: $0.list[indexPath.row])
+            cell?.fill(with: $0.list[indexPath.row], formatter: self.formatter)
         }
         
         return cell ?? UITableViewCell()
