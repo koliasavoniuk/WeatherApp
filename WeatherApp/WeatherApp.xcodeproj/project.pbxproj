@@ -15,6 +15,7 @@
 		765CA63520AF168C003D293B /* FavoritePlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA63320AF168C003D293B /* FavoritePlacesCollectionViewCell.swift */; };
 		765CA63620AF168C003D293B /* FavoritePlacesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765CA63420AF168C003D293B /* FavoritePlacesCollectionViewCell.xib */; };
 		765CA63820AF1B55003D293B /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA63720AF1B55003D293B /* UICollectionView+Extensions.swift */; };
+		765DFD3320B80E29009A1625 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765DFD3220B80E29009A1625 /* LocationManager.swift */; };
 		768ADE6920B4412B00F63095 /* CurrentWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768ADE6820B4412B00F63095 /* CurrentWeatherModel.swift */; };
 		768ADE6D20B56DF200F63095 /* HourlyForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768ADE6C20B56DF200F63095 /* HourlyForecastModel.swift */; };
 		768ADE7320B6BF4100F63095 /* AlamofireRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768ADE7220B6BF4100F63095 /* AlamofireRequest.swift */; };
@@ -51,6 +52,7 @@
 		765CA63320AF168C003D293B /* FavoritePlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlacesCollectionViewCell.swift; sourceTree = "<group>"; };
 		765CA63420AF168C003D293B /* FavoritePlacesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritePlacesCollectionViewCell.xib; sourceTree = "<group>"; };
 		765CA63720AF1B55003D293B /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		765DFD3220B80E29009A1625 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		768ADE6820B4412B00F63095 /* CurrentWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherModel.swift; sourceTree = "<group>"; };
 		768ADE6C20B56DF200F63095 /* HourlyForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastModel.swift; sourceTree = "<group>"; };
 		768ADE7220B6BF4100F63095 /* AlamofireRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRequest.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		765DFD3120B80E0D009A1625 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				765DFD3220B80E29009A1625 /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		768ADE6220B4088200F63095 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +189,7 @@
 		76B732CD20A98D78004A7D73 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				765DFD3120B80E0D009A1625 /* Managers */,
 				768ADE6720B4411100F63095 /* Models */,
 				768ADE6220B4088200F63095 /* Providers */,
 				76B732E720A998F9004A7D73 /* Constants */,
@@ -416,6 +427,7 @@
 				76B732B920A98D16004A7D73 /* AppDelegate.swift in Sources */,
 				76B732D520A98DE5004A7D73 /* MainTabBarView.swift in Sources */,
 				768ADE6D20B56DF200F63095 /* HourlyForecastModel.swift in Sources */,
+				765DFD3320B80E29009A1625 /* LocationManager.swift in Sources */,
 				76D5512C20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift in Sources */,
 				765CA62520AEEF44003D293B /* FoundationKitFunctions.swift in Sources */,
 				765CA63020AF0236003D293B /* HourlyForecastTableViewCell.swift in Sources */,
@@ -549,7 +561,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JXTVQ459TL;
+				DEVELOPMENT_TEAM = K33J7AD8C7;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mykola-Savoniuk.WeatherApp";
@@ -565,7 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JXTVQ459TL;
+				DEVELOPMENT_TEAM = K33J7AD8C7;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mykola-Savoniuk.WeatherApp";

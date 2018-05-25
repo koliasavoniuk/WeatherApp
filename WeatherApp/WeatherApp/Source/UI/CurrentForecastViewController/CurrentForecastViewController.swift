@@ -14,6 +14,7 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
     
     @IBOutlet var rootView: CurrentForecastView!
     private var weatherProvider: WeatherProvider<CurrentWeatherModel>?
+    private var locationManager: LocationManager?
     
     // MARK: - ViewController Lifecycle
     
@@ -21,7 +22,7 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
         super.viewDidLoad()
         
         self.configureView()
-        self.startProvider()
+        self.startLocationManager()
     }
     
     // MARK: - Private
@@ -32,7 +33,13 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
         self.navigationItem.title = VCTitles.current.rawValue
     }
     
-    private func startProvider() {
+    private func startLocationManager() {
+        self.locationManager = LocationManager()
+        self.locationManager?.delegate = self
+        self.locationManager?.execute()
+    }
+    
+    private func startWeatherProvider() {
         let url = URL(string: "https://api.openweathermap.org/data/2.5/weather") ?? URL(fileURLWithPath: "")
         
         let parameters = [
@@ -53,8 +60,14 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
     }
     
     func modelDidLoad(observableObject: AnyObject) {
-        self.weatherProvider?.result.map {
-            self.rootView.fill(with: $0)
+        if observableObject === self.locationManager {
+            self.startWeatherProvider()
+        }
+        
+        if observableObject === self.weatherProvider {
+            self.weatherProvider?.result.map {
+                self.rootView.fill(with: $0)
+            }
         }
     }
     
