@@ -24,7 +24,6 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
         self.configureView()
         self.configureTableVC()
         self.startProvider()
-        self.rootView.prepareView()
     }
     
     // MARK: - UITableViewDataSource

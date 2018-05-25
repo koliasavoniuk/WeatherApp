@@ -17,7 +17,8 @@ class FavoritePlacesCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.backgroundColor = .clear
     }
 
 }

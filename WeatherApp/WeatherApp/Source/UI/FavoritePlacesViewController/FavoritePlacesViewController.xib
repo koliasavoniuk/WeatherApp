@@ -21,6 +21,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aw7-Tf-Kc1">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Hw8-fe-YlY">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,13 +41,18 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="aw7-Tf-Kc1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EdQ-i7-7Ay"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hw8-fe-YlY" secondAttribute="trailing" id="FS9-mg-JET"/>
+                <constraint firstItem="aw7-Tf-Kc1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="M1Q-a8-2uu"/>
                 <constraint firstItem="Hw8-fe-YlY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QVM-rb-WJo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Hw8-fe-YlY" secondAttribute="bottom" id="Xue-0H-okg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aw7-Tf-Kc1" secondAttribute="bottom" id="nVv-fF-yc1"/>
                 <constraint firstItem="Hw8-fe-YlY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vzU-kk-TOF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aw7-Tf-Kc1" secondAttribute="trailing" id="yt8-eN-t5w"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
+                <outlet property="backgroundImageView" destination="aw7-Tf-Kc1" id="9cA-3A-vvj"/>
                 <outlet property="collectionView" destination="Hw8-fe-YlY" id="eLn-DW-9Lc"/>
             </connections>
         </view>

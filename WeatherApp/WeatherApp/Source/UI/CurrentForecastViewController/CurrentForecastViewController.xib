@@ -22,6 +22,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SQa-Ab-DMv">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEy-cN-f8l">
                     <rect key="frame" x="25" y="75" width="42" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -69,13 +72,17 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="JKW-X8-7ct" firstAttribute="trailing" secondItem="SQa-Ab-DMv" secondAttribute="trailing" id="0NQ-2f-r4e"/>
                 <constraint firstItem="TEy-cN-f8l" firstAttribute="leading" secondItem="JKW-X8-7ct" secondAttribute="leading" constant="25" id="3oA-DG-WOD"/>
                 <constraint firstItem="AWr-RB-Phb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HDJ-46-LFg"/>
+                <constraint firstItem="JKW-X8-7ct" firstAttribute="bottom" secondItem="SQa-Ab-DMv" secondAttribute="bottom" id="IEv-2T-Sdn"/>
+                <constraint firstItem="SQa-Ab-DMv" firstAttribute="top" secondItem="JKW-X8-7ct" secondAttribute="top" id="M4O-uU-abq"/>
                 <constraint firstItem="sH6-2s-fU2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MOz-BI-ZVs"/>
                 <constraint firstItem="sH6-2s-fU2" firstAttribute="centerY" secondItem="TEy-cN-f8l" secondAttribute="centerY" id="Xk5-ct-bUv"/>
                 <constraint firstItem="sH6-2s-fU2" firstAttribute="top" secondItem="JKW-X8-7ct" secondAttribute="top" constant="15" id="Zd7-jx-7XI"/>
                 <constraint firstItem="VWm-oH-gBc" firstAttribute="leading" secondItem="JKW-X8-7ct" secondAttribute="leading" constant="70" id="czL-pu-oWE"/>
                 <constraint firstItem="JKW-X8-7ct" firstAttribute="trailing" secondItem="VWm-oH-gBc" secondAttribute="trailing" constant="70" id="dTd-ku-Ou4"/>
+                <constraint firstItem="SQa-Ab-DMv" firstAttribute="leading" secondItem="JKW-X8-7ct" secondAttribute="leading" id="mg0-nS-WoB"/>
                 <constraint firstItem="VWm-oH-gBc" firstAttribute="top" secondItem="sH6-2s-fU2" secondAttribute="bottom" constant="100" id="n48-K8-cFy"/>
                 <constraint firstItem="VWm-oH-gBc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tpj-ki-grg"/>
                 <constraint firstItem="AWr-RB-Phb" firstAttribute="top" secondItem="VWm-oH-gBc" secondAttribute="bottom" constant="20" id="vpv-nH-rJc"/>
@@ -83,6 +90,7 @@
             <nil key="simulatedTopBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="JKW-X8-7ct"/>
             <connections>
+                <outlet property="backgroundImageView" destination="SQa-Ab-DMv" id="Gtq-ia-kEu"/>
                 <outlet property="humidityLabel" destination="wRB-jh-XGU" id="Rcq-fa-fgk"/>
                 <outlet property="pressureLabel" destination="GnQ-IH-1R6" id="YSq-4S-nb9"/>
                 <outlet property="temperatureLabel" destination="TEy-cN-f8l" id="jPa-bk-S0B"/>
