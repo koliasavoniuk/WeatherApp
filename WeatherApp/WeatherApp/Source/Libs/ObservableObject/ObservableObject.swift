@@ -39,7 +39,7 @@ protocol ObservableObjectDelegate: class {
     func modelFailLoading(observableObject: AnyObject, error: String)
 }
 
-class ObservableObject {
+class ObservableObject: NSObject {
     weak var delegate: ObservableObjectDelegate?
     var shouldPostNotifications = false
     var state: ModelState = .notLoaded {
