@@ -10,8 +10,6 @@ import Foundation
 import CoreLocation
 
 class LocationManager: ObservableObject, CLLocationManagerDelegate {
-    var result: CLLocationCoordinate2D?
-    
     private let locationManager = CLLocationManager()
     
     func execute() {
@@ -40,7 +38,10 @@ class LocationManager: ObservableObject, CLLocationManagerDelegate {
     
     // MARK: - <CLLocationManagerDelegate>
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.result = locations.first?.coordinate
+
+        SharedLocation.sharedInstance.latitude = locations.first?.coordinate.latitude ?? 0
+        SharedLocation.sharedInstance.longitude = locations.first?.coordinate.longitude ?? 0
+        
         self.state = .didLoad
     }
     

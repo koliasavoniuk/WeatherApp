@@ -54,7 +54,8 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
         let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast") ?? URL(fileURLWithPath: "")
         
         let parameters = [
-            "q": "Kyiv",
+            "lat": String(describing: SharedLocation.sharedInstance.latitude),
+            "lon": String(describing: SharedLocation.sharedInstance.longitude),
             "units": "metric",
             "APPID" : "e6274a1ed80da6b1a0f04eaaaf73806c"
         ]
