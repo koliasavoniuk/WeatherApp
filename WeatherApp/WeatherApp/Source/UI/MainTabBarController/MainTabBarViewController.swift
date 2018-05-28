@@ -15,6 +15,7 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tabBar.tintColor = UIColor.black
         self.configureTabBar()
     }
 

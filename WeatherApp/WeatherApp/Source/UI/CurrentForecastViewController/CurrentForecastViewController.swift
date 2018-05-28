@@ -77,6 +77,6 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
     }
     
     func modelFailLoading(observableObject: AnyObject, error: String) {
-        print("ModelFailLoading")
+        print("ModelFailLoading", error)
     }
 }
