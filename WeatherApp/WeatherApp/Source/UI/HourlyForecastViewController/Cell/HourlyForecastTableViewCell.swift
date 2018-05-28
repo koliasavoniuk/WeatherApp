@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class HourlyForecastTableViewCell: UITableViewCell {
+final class HourlyForecastTableViewCell: UITableViewCell, ImageByDescription {
     
     // MARK: - Outlets
     
@@ -30,6 +30,7 @@ final class HourlyForecastTableViewCell: UITableViewCell {
         self.windSpeedLabel.text = String(model.wind.speed)
         self.pressureLabel.text = String(model.main.pressure)
         self.humidityLabel.text = String(model.main.humidity)
+        self.weatherImage.image = image(by: model.description.first)
         
         let date = Date(timeIntervalSince1970: TimeInterval(model.timestamp))
         self.processDate(date: date, formatter: formatter)

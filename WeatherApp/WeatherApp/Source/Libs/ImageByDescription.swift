@@ -20,10 +20,21 @@ extension ImageByDescription {
         
         switch stringDescription {
             case "broken clouds":
-                image = UIImage(named: "medium_cloud")!
-
+                image = UIImage(named: "overcast clouds") ?? UIImage()
+            case "haze" :
+                image = UIImage(named: "haze") ?? UIImage()
+        case "clear sky" :
+                image = UIImage(named: "sunny") ?? UIImage()
+        case "few clouds" :
+            image = UIImage(named: "overcast clouds") ?? UIImage()
+        case "scattered clouds" :
+            image = UIImage(named: "scattered clouds") ?? UIImage()
+        case "overcast clouds" :
+            image = UIImage(named: "overcast clouds") ?? UIImage()
+        case "light rain" :
+            image = UIImage(named: "light rain") ?? UIImage()
             default:
-                print("Fail")
+                print(stringDescription)
             }
         
         return image
