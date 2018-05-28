@@ -10,7 +10,7 @@ import Foundation
 
 struct Main: Decodable {
     let temperature: Double
-    let pressure: Int
+    let pressure: Double
     let humidity: Int
     
     enum CodingKeys: String, CodingKey {
@@ -22,7 +22,7 @@ struct Main: Decodable {
 
 struct Wind: Decodable {
     let speed: Double
-    let degree: Int
+    let degree: Double
 
     enum CodingKeys: String, CodingKey {
         case speed
