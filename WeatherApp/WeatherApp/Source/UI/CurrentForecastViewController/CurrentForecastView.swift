@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrentForecastView: UIView {
+class CurrentForecastView: UIView, ImageByDescription {
     
      // MARK: - Outlets
     
@@ -32,6 +32,7 @@ class CurrentForecastView: UIView {
         self.windspeedLabel.text = String(model.wind.speed)
         self.pressureLabel.text = String(model.main.pressure)
         self.humidityLabel.text = String(model.main.humidity)
+        self.weatherImage.image = self.image(by: model.description.first)
         self.weatherDescription.text = String(describing: model.description.first?.description ?? "")
     }
 }
