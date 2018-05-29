@@ -23,4 +23,5 @@ enum VCTitles: String {
     case daily = "Daily"
     case hourly = "Hourly"
     case favorite = "Favorite"
+    case map = "Map"
 }

@@ -28,7 +28,8 @@ class MainTabBarViewController: UITabBarController {
         
         let currentForecastVC = createNavController(viewController: CurrentForecastViewController(), with: currentIcon)
         let hourlyForecastVC = createNavController(viewController: HourlyForecastViewController(), with: hourlyIcon)
-        let favoritePlacesVC = createNavController(viewController: FavoritePlacesViewController(), with: favoriteIcon)
+        //let favoritePlacesVC = createNavController(viewController: FavoritePlacesViewController(), with: favoriteIcon)
+        let favoritePlacesVC = createNavController(viewController: MapViewController(), with: favoriteIcon)
         
         viewControllers = [currentForecastVC, hourlyForecastVC, favoritePlacesVC]
     }
