@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7607729E20BD4A2B00C11100 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7607729C20BD4A2B00C11100 /* MapViewController.swift */; };
+		7607729F20BD4A2B00C11100 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7607729D20BD4A2B00C11100 /* MapViewController.xib */; };
+		760772A120BD4A6D00C11100 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760772A020BD4A6D00C11100 /* MapView.swift */; };
 		765CA62320AEEF11003D293B /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA62220AEEF11003D293B /* UITableView+Extensions.swift */; };
 		765CA62520AEEF44003D293B /* FoundationKitFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA62420AEEF44003D293B /* FoundationKitFunctions.swift */; };
 		765CA62C20AEF227003D293B /* UITableView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA62B20AEF227003D293B /* UITableView+Dequeue.swift */; };
 		765CA63020AF0236003D293B /* HourlyForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA62E20AF0236003D293B /* HourlyForecastTableViewCell.swift */; };
 		765CA63120AF0236003D293B /* HourlyForecastTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765CA62F20AF0236003D293B /* HourlyForecastTableViewCell.xib */; };
-		765CA63520AF168C003D293B /* FavoritePlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA63320AF168C003D293B /* FavoritePlacesCollectionViewCell.swift */; };
-		765CA63620AF168C003D293B /* FavoritePlacesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765CA63420AF168C003D293B /* FavoritePlacesCollectionViewCell.xib */; };
 		765CA63820AF1B55003D293B /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765CA63720AF1B55003D293B /* UICollectionView+Extensions.swift */; };
 		765DFD3320B80E29009A1625 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765DFD3220B80E29009A1625 /* LocationManager.swift */; };
 		765DFD3520B85806009A1625 /* SharedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765DFD3420B85806009A1625 /* SharedLocation.swift */; };
@@ -36,9 +37,6 @@
 		76B732EC20A9AD56004A7D73 /* CurrentForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732EB20A9AD56004A7D73 /* CurrentForecastView.swift */; };
 		76B732EF20A9AD67004A7D73 /* CurrentForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732ED20A9AD67004A7D73 /* CurrentForecastViewController.swift */; };
 		76B732F020A9AD67004A7D73 /* CurrentForecastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732EE20A9AD67004A7D73 /* CurrentForecastViewController.xib */; };
-		76B732F520AAB238004A7D73 /* FavoritePlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732F320AAB238004A7D73 /* FavoritePlacesViewController.swift */; };
-		76B732F620AAB238004A7D73 /* FavoritePlacesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B732F420AAB238004A7D73 /* FavoritePlacesViewController.xib */; };
-		76B732F820AAB252004A7D73 /* FavoritePlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B732F720AAB252004A7D73 /* FavoritePlacesView.swift */; };
 		76D5512C20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5512B20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift */; };
 		76D5513020B307090096C2AC /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D5512F20B307090096C2AC /* ObservableObject.swift */; };
 		C23EBFDE7377F9948B7A6966 /* Pods_WeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150873BBEF8B5915FAAE618B /* Pods_WeatherApp.framework */; };
@@ -46,13 +44,14 @@
 
 /* Begin PBXFileReference section */
 		150873BBEF8B5915FAAE618B /* Pods_WeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7607729C20BD4A2B00C11100 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7607729D20BD4A2B00C11100 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		760772A020BD4A6D00C11100 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		765CA62220AEEF11003D293B /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		765CA62420AEEF44003D293B /* FoundationKitFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationKitFunctions.swift; sourceTree = "<group>"; };
 		765CA62B20AEF227003D293B /* UITableView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeue.swift"; sourceTree = "<group>"; };
 		765CA62E20AF0236003D293B /* HourlyForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastTableViewCell.swift; sourceTree = "<group>"; };
 		765CA62F20AF0236003D293B /* HourlyForecastTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourlyForecastTableViewCell.xib; sourceTree = "<group>"; };
-		765CA63320AF168C003D293B /* FavoritePlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlacesCollectionViewCell.swift; sourceTree = "<group>"; };
-		765CA63420AF168C003D293B /* FavoritePlacesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritePlacesCollectionViewCell.xib; sourceTree = "<group>"; };
 		765CA63720AF1B55003D293B /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		765DFD3220B80E29009A1625 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		765DFD3420B85806009A1625 /* SharedLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLocation.swift; sourceTree = "<group>"; };
@@ -77,9 +76,6 @@
 		76B732EB20A9AD56004A7D73 /* CurrentForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecastView.swift; sourceTree = "<group>"; };
 		76B732ED20A9AD67004A7D73 /* CurrentForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentForecastViewController.swift; sourceTree = "<group>"; };
 		76B732EE20A9AD67004A7D73 /* CurrentForecastViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentForecastViewController.xib; sourceTree = "<group>"; };
-		76B732F320AAB238004A7D73 /* FavoritePlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlacesViewController.swift; sourceTree = "<group>"; };
-		76B732F420AAB238004A7D73 /* FavoritePlacesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritePlacesViewController.xib; sourceTree = "<group>"; };
-		76B732F720AAB252004A7D73 /* FavoritePlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlacesView.swift; sourceTree = "<group>"; };
 		76D5512B20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
 		76D5512F20B307090096C2AC /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
 		AC0FE8F58678D9417C900810 /* Pods-WeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherApp/Pods-WeatherApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,20 +111,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7607729B20BD4A0F00C11100 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7607729C20BD4A2B00C11100 /* MapViewController.swift */,
+				7607729D20BD4A2B00C11100 /* MapViewController.xib */,
+				760772A020BD4A6D00C11100 /* MapView.swift */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
 		765CA62D20AF020A003D293B /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				765CA62E20AF0236003D293B /* HourlyForecastTableViewCell.swift */,
 				765CA62F20AF0236003D293B /* HourlyForecastTableViewCell.xib */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		765CA63220AF1669003D293B /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				765CA63320AF168C003D293B /* FavoritePlacesCollectionViewCell.swift */,
-				765CA63420AF168C003D293B /* FavoritePlacesCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -207,7 +204,7 @@
 		76B732CE20A98D89004A7D73 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				76B732F220AAB15A004A7D73 /* FavoritePlacesViewController */,
+				7607729B20BD4A0F00C11100 /* MapViewController */,
 				76B732EA20A9AD33004A7D73 /* CurrentForecastViewController */,
 				76B732D620A990B9004A7D73 /* HourlyForecastViewController */,
 				76B732CF20A98D96004A7D73 /* MainTabBarController */,
@@ -264,17 +261,6 @@
 				76D5512B20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		76B732F220AAB15A004A7D73 /* FavoritePlacesViewController */ = {
-			isa = PBXGroup;
-			children = (
-				765CA63220AF1669003D293B /* Cell */,
-				76B732F320AAB238004A7D73 /* FavoritePlacesViewController.swift */,
-				76B732F420AAB238004A7D73 /* FavoritePlacesViewController.xib */,
-				76B732F720AAB252004A7D73 /* FavoritePlacesView.swift */,
-			);
-			path = FavoritePlacesViewController;
 			sourceTree = "<group>";
 		};
 		76D5512D20B306E20096C2AC /* Libs */ = {
@@ -360,10 +346,9 @@
 				765CA63120AF0236003D293B /* HourlyForecastTableViewCell.xib in Resources */,
 				76B732F020A9AD67004A7D73 /* CurrentForecastViewController.xib in Resources */,
 				76B732D320A98DD2004A7D73 /* MainTabBarViewController.xib in Resources */,
+				7607729F20BD4A2B00C11100 /* MapViewController.xib in Resources */,
 				76B732C620A98D16004A7D73 /* LaunchScreen.storyboard in Resources */,
 				76B732C320A98D16004A7D73 /* Assets.xcassets in Resources */,
-				765CA63620AF168C003D293B /* FavoritePlacesCollectionViewCell.xib in Resources */,
-				76B732F620AAB238004A7D73 /* FavoritePlacesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,15 +401,12 @@
 				765CA62C20AEF227003D293B /* UITableView+Dequeue.swift in Sources */,
 				765CA62320AEEF11003D293B /* UITableView+Extensions.swift in Sources */,
 				768ADE6920B4412B00F63095 /* CurrentWeatherModel.swift in Sources */,
-				76B732F520AAB238004A7D73 /* FavoritePlacesViewController.swift in Sources */,
 				76B732E420A99139004A7D73 /* HourlyForecastView.swift in Sources */,
 				768ADE7320B6BF4100F63095 /* AlamofireRequest.swift in Sources */,
 				76B732EC20A9AD56004A7D73 /* CurrentForecastView.swift in Sources */,
 				768ADE7520B6C40E00F63095 /* WeatherProvider.swift in Sources */,
 				76B732D220A98DD2004A7D73 /* MainTabBarViewController.swift in Sources */,
 				76B732EF20A9AD67004A7D73 /* CurrentForecastViewController.swift in Sources */,
-				76B732F820AAB252004A7D73 /* FavoritePlacesView.swift in Sources */,
-				765CA63520AF168C003D293B /* FavoritePlacesCollectionViewCell.swift in Sources */,
 				7675A19E20BC07E8004D6731 /* ImageByDescription.swift in Sources */,
 				76B732C120A98D16004A7D73 /* WeatherApp.xcdatamodeld in Sources */,
 				765CA63820AF1B55003D293B /* UICollectionView+Extensions.swift in Sources */,
@@ -434,7 +416,9 @@
 				76B732B920A98D16004A7D73 /* AppDelegate.swift in Sources */,
 				76B732D520A98DE5004A7D73 /* MainTabBarView.swift in Sources */,
 				768ADE6D20B56DF200F63095 /* HourlyForecastModel.swift in Sources */,
+				760772A120BD4A6D00C11100 /* MapView.swift in Sources */,
 				765DFD3320B80E29009A1625 /* LocationManager.swift in Sources */,
+				7607729E20BD4A2B00C11100 /* MapViewController.swift in Sources */,
 				76D5512C20B2C3FA0096C2AC /* UICollectionView+Dequeue.swift in Sources */,
 				765CA62520AEEF44003D293B /* FoundationKitFunctions.swift in Sources */,
 				765CA63020AF0236003D293B /* HourlyForecastTableViewCell.swift in Sources */,

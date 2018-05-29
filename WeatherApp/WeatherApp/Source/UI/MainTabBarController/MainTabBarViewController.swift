@@ -24,13 +24,13 @@ class MainTabBarViewController: UITabBarController {
     private func configureTabBar() {
         let hourlyIcon = UIImage(named: PictureName.hourly_icon.rawValue) ?? UIImage()
         let currentIcon = UIImage(named: PictureName.current_icon.rawValue) ?? UIImage()
-        let favoriteIcon = UIImage(named: PictureName.favorite_icon.rawValue) ?? UIImage()
+        let mapIcon = UIImage(named: PictureName.map_icon.rawValue) ?? UIImage()
         
         let currentForecastVC = createNavController(viewController: CurrentForecastViewController(), with: currentIcon)
         let hourlyForecastVC = createNavController(viewController: HourlyForecastViewController(), with: hourlyIcon)
-        let favoritePlacesVC = createNavController(viewController: FavoritePlacesViewController(), with: favoriteIcon)
+        let mapVC = createNavController(viewController: MapViewController(), with: mapIcon)
         
-        viewControllers = [currentForecastVC, hourlyForecastVC, favoritePlacesVC]
+        viewControllers = [currentForecastVC, hourlyForecastVC, mapVC]
     }
 }
 

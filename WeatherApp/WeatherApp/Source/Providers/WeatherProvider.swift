@@ -33,7 +33,7 @@ final class WeatherProvider<ModelType>: ObservableObject, AlamofireRequest
                     self.state = .didLoad
                     
                 } catch {
-                    self.state = .failLoading(error: "Can't parse JSON")
+                    self.state = .failLoading(error: Strings.cannot_parse_json.rawValue)
                 }
                 
             case .failure(let error):

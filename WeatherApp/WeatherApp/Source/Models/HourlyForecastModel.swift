@@ -17,7 +17,7 @@ struct HourlyForecastItem: Decodable {
     let main: MainHourlyForecast
     let wind: HourlyForecastWind
     let description: [Description]
-    let timestamp: Int
+    let timestamp: Double
     
     enum CodingKeys: String, CodingKey {
         case main
@@ -40,7 +40,7 @@ struct HourlyForecastWind: Decodable {
 struct MainHourlyForecast: Decodable {
     let temperature: Double
     let pressure: Double
-    let humidity: Int
+    let humidity: Double
     
     enum CodingKeys: String, CodingKey {
         case temperature = "temp"
