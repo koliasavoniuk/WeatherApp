@@ -33,6 +33,9 @@ class MapViewController: UIViewController {
         annotation.coordinate = locationCoord
         annotation.title = Strings.chosen_location.rawValue
         
+        SharedLocation.sharedInstance.latitude = locationCoord.latitude
+        SharedLocation.sharedInstance.longitude = locationCoord.longitude
+        
         self.rootView.mapView.removeAnnotations(self.rootView.mapView.annotations)
         self.rootView.mapView.addAnnotation(annotation)
     }
