@@ -19,10 +19,12 @@ extension ImageByDescription {
         let stringDescription = description?.description ?? ""
         
         switch stringDescription {
-            case "broken clouds":
-                image = UIImage(named: "overcast clouds") ?? UIImage()
-            case "haze" :
-                image = UIImage(named: "haze") ?? UIImage()
+        case "broken clouds":
+            image = UIImage(named: "overcast clouds") ?? UIImage()
+        case "haze" :
+            image = UIImage(named: "haze") ?? UIImage()
+        case "mist" :
+            image = UIImage(named: "haze") ?? UIImage()
         case "clear sky" :
                 image = UIImage(named: "sunny") ?? UIImage()
         case "few clouds" :
