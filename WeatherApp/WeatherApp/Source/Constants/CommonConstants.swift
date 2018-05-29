@@ -9,19 +9,21 @@
 import Foundation
 
 // MARK: - Pictures
+
 enum PictureName: String {
     case hourly_icon
     case daily_icon
     case settings_icon
     case current_icon
     case favorite_icon
+    case map_icon
 }
 
 // MARK: - ViewController Titles
+
 enum VCTitles: String {
     case current = "Current"
     case daily = "Daily"
     case hourly = "Hourly"
-    case favorite = "Favorite"
     case map = "Map"
 }
