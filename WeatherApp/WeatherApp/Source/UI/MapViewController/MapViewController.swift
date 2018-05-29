@@ -31,7 +31,7 @@ class MapViewController: UIViewController {
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = locationCoord
-        annotation.title = "Chosen location"
+        annotation.title = Strings.chosen_location.rawValue
         
         self.rootView.mapView.removeAnnotations(self.rootView.mapView.annotations)
         self.rootView.mapView.addAnnotation(annotation)

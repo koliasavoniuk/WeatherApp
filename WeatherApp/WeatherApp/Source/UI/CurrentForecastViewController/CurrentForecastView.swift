@@ -18,6 +18,7 @@ class CurrentForecastView: UIView, ImageByDescription {
     @IBOutlet var humidityLabel: UILabel!
     @IBOutlet var weatherImage: UIImageView!
     @IBOutlet var weatherDescription: UILabel!
+    @IBOutlet var nameLabel: UILabel!
     
     // MARK: - Lifecycle
     
@@ -32,6 +33,7 @@ class CurrentForecastView: UIView, ImageByDescription {
         self.windspeedLabel.text = String(model.wind.speed)
         self.pressureLabel.text = String(model.main.pressure)
         self.humidityLabel.text = String(model.main.humidity)
+        self.nameLabel.text = model.name
         self.weatherImage.image = self.image(by: model.description.first)
         self.weatherDescription.text = String(describing: model.description.first?.description ?? "")
     }

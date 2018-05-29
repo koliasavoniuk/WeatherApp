@@ -27,3 +27,10 @@ enum VCTitles: String {
     case hourly = "Hourly"
     case map = "Map"
 }
+
+// MARK: - Different Strings
+
+enum Strings: String {
+    case chosen_location = "Chosen location"
+    case cannot_parse_json = "Cannot parse JSON"
+}
