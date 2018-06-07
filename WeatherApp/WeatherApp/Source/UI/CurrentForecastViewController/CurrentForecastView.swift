@@ -29,10 +29,10 @@ class CurrentForecastView: UIView, ImageByDescription {
     // MARK: - Outlets
     
     func fill(with model: CurrentWeatherModel) {
-        self.temperatureLabel.text = String(model.main.temperature)
-        self.windspeedLabel.text = String(model.wind.speed)
-        self.pressureLabel.text = String(model.main.pressure)
-        self.humidityLabel.text = String(model.main.humidity)
+        self.temperatureLabel.text = String(model.main.temperature) + " °C"
+        self.windspeedLabel.text = String(model.wind.speed) + " M/S"
+        self.pressureLabel.text = String(model.main.pressure) + " mm"
+        self.humidityLabel.text = String(model.main.humidity) + " %"
         self.nameLabel.text = model.name
         self.weatherImage.image = self.image(by: model.description.first)
         self.weatherDescription.text = String(describing: model.description.first?.description ?? "")

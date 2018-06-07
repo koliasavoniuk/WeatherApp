@@ -24,6 +24,7 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
         self.configureView()
         self.configureTableVC()
         self.startProvider()
+        self.configureNavigationItem()
     }
     
     // MARK: - UITableViewDataSource
@@ -50,12 +51,16 @@ class HourlyForecastViewController: UIViewController, ObservableObjectDelegate, 
         self.navigationItem.title = VCTitles.hourly.rawValue
     }
     
-    private func startProvider() {
+    private func configureNavigationItem() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(startProvider))
+    }
+    
+    @objc private func startProvider() {
         let url = URL(string: "https://api.openweathermap.org/data/2.5/forecast") ?? URL(fileURLWithPath: "")
         
         let parameters = [
-            "lat": String(describing: SharedLocation.sharedInstance.latitude),
-            "lon": String(describing: SharedLocation.sharedInstance.longitude),
+            "lat": String(describing: SharedLocation.sharedInstance.coordinates.latitude),
+            "lon": String(describing: SharedLocation.sharedInstance.coordinates.longitude),
             "units": "metric",
             "APPID" : "e6274a1ed80da6b1a0f04eaaaf73806c"
         ]

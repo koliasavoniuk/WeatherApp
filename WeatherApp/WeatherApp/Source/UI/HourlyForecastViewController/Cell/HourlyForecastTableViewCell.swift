@@ -26,10 +26,10 @@ final class HourlyForecastTableViewCell: UITableViewCell, ImageByDescription {
     // Formatter created once in controller,
     //because creating new DateFormatter for every cell is very expensive operation
     func fill(with model: HourlyForecastItem, formatter: DateFormatter) {
-        self.temperatureLabel.text = String(model.main.temperature)
-        self.windSpeedLabel.text = String(model.wind.speed)
-        self.pressureLabel.text = String(model.main.pressure)
-        self.humidityLabel.text = String(model.main.humidity)
+        self.temperatureLabel.text = String(model.main.temperature) + " °C"
+        self.windSpeedLabel.text = String(model.wind.speed) + " M/S"
+        self.pressureLabel.text = String(model.main.pressure) + " mm"
+        self.humidityLabel.text = String(model.main.humidity) + " %"
         self.weatherImage.image = image(by: model.description.first)
         
         let date = Date(timeIntervalSince1970: TimeInterval(model.timestamp))

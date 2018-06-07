@@ -35,6 +35,8 @@ extension ImageByDescription {
             image = UIImage(named: "overcast clouds") ?? UIImage()
         case "light rain" :
             image = UIImage(named: "light rain") ?? UIImage()
+        case "moderate rain" :
+            image = UIImage(named: "light rain") ?? UIImage()
             default:
                 print(stringDescription)
             }

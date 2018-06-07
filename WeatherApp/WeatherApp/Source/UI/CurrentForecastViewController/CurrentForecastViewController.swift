@@ -23,6 +23,7 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
         
         self.configureView()
         self.startLocationManager()
+        self.configureNavigationItem()
     }
     
     // MARK: - Private
@@ -33,18 +34,22 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
         self.navigationItem.title = VCTitles.current.rawValue
     }
     
+    private func configureNavigationItem() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(startWeatherProvider))
+    }
+    
     private func startLocationManager() {
         self.locationManager = LocationManager()
         self.locationManager?.delegate = self
         self.locationManager?.execute()
     }
     
-    private func startWeatherProvider() {
+    @objc private func startWeatherProvider() {
         let url = URL(string: "https://api.openweathermap.org/data/2.5/weather") ?? URL(fileURLWithPath: "")
         
         let parameters = [
-            "lat": String(describing: SharedLocation.sharedInstance.latitude),
-            "lon": String(describing: SharedLocation.sharedInstance.longitude),
+            "lat": String(describing: SharedLocation.sharedInstance.coordinates.latitude),
+            "lon": String(describing: SharedLocation.sharedInstance.coordinates.longitude),
             "units": "metric",
             "APPID" : "e6274a1ed80da6b1a0f04eaaaf73806c"
         ]
@@ -62,6 +67,7 @@ class CurrentForecastViewController: UIViewController, ObservableObjectDelegate 
     
     func modelDidLoad(observableObject: AnyObject) {
         if observableObject === self.locationManager {
+            self.locationManager?.cancel()
             self.startWeatherProvider()
         }
         

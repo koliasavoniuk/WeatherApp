@@ -33,4 +33,5 @@ enum VCTitles: String {
 enum Strings: String {
     case chosen_location = "Chosen location"
     case cannot_parse_json = "Cannot parse JSON"
+    case current_location = "Current location"
 }

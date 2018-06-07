@@ -21,6 +21,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         self.configureView()
+        self.addStartPin()
     }
 
     // MARK: - Action
@@ -33,14 +34,22 @@ class MapViewController: UIViewController {
         annotation.coordinate = locationCoord
         annotation.title = Strings.chosen_location.rawValue
         
-        SharedLocation.sharedInstance.latitude = locationCoord.latitude
-        SharedLocation.sharedInstance.longitude = locationCoord.longitude
+        SharedLocation.sharedInstance.coordinates = locationCoord
         
         self.rootView.mapView.removeAnnotations(self.rootView.mapView.annotations)
         self.rootView.mapView.addAnnotation(annotation)
     }
     
     // MARK: - Private
+    
+    private func addStartPin() {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = SharedLocation.sharedInstance.coordinates
+        annotation.title = Strings.current_location.rawValue
+        self.rootView.mapView.centerCoordinate = SharedLocation.sharedInstance.coordinates
+        
+        self.rootView.mapView.addAnnotation(annotation)
+    }
     
     private func configureView() {
         self.view.backgroundColor = UIColor.white

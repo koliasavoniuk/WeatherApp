@@ -38,9 +38,7 @@ class LocationManager: ObservableObject, CLLocationManagerDelegate {
     
     // MARK: - <CLLocationManagerDelegate>
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
-        SharedLocation.sharedInstance.latitude = locations.first?.coordinate.latitude ?? 0
-        SharedLocation.sharedInstance.longitude = locations.first?.coordinate.longitude ?? 0
+        SharedLocation.sharedInstance.coordinates = locations.first?.coordinate ?? CLLocationCoordinate2D()
         
         self.state = .didLoad
     }

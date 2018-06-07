@@ -7,12 +7,11 @@
 //
 
 import Foundation
+import CoreLocation
 
 class SharedLocation {
     static let sharedInstance = SharedLocation()
-    
-    var latitude = Double()
-    var longitude = Double()
+    var coordinates = CLLocationCoordinate2D()
     
     private init() {}
 }

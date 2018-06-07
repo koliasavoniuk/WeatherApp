@@ -22,11 +22,11 @@ struct Main: Decodable {
 
 struct Wind: Decodable {
     let speed: Double
-    let degree: Double
+    //let degree: Double
 
     enum CodingKeys: String, CodingKey {
         case speed
-        case degree = "deg"
+        //case degree = "deg"
     }
 }
 
